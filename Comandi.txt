@@ -1,3 +1,6 @@
+cd git
+cd timWebsite
+
 git status : stato dei file
 git add <nomefile.txt> : aggiungere il file
 git commit -m "messaggio di commit" : Per indicare i lavori svolti
