@@ -6,7 +6,7 @@
 	$(".landmark").load("landmark.html");
 
 	// default behaviour: load homepage
-	$(".main").load( "home.html");
+	$(".page").load( "home.html");
 	
 	// load footer
 	$(".footer").load("footer.html"); 
