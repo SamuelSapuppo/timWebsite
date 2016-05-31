@@ -4,12 +4,14 @@ body {
 	font-size: 100%;	
 }
 
-
+/*---EFFECTIVE BODY PAGE---*/
 .realbody {
 	margin: 0 auto;
 	width: 1024px;
 	height: 100%;
 }
+
+/*header*/
 .header {
 	background-color:red;
 	height: 100%;
@@ -38,7 +40,8 @@ body {
 	height: 100%;
 }
 
-.red {
+/*---LANDMARK---*/
+.redland {
 	padding-left: 10px;
 }
 .land {
@@ -47,30 +50,28 @@ body {
 	height: 30px;
 }
 
-.red a:link, .red a:visited {
+.redland a:link, .redland a:visited {
 	font-size:110%;
+	color: white;
+	background-color: #F50733;
 	margin-top: 4px;
 	padding-top:10px;
-	color: white;
 	border: solid 2px white;
 	text-align: center;
-	background-color: #F50733;
 	display: block;
-
-	
-
 	
 }
-.red a:hover {
+.redland a:hover {
 	background-color: #F5585B;
 }
 
-.blue {
+
+.blueland {
 	padding-top: 95px;
 	padding-left:10px;
 }
 
-.blue a:link, a:visited {
+.blueland a:link, .blueland a:visited {
 	font-size:110%;
 	margin-top:4px;
 	color: white;
@@ -80,6 +81,34 @@ body {
 	display: block;
 }
 
-.blue a:hover {
+.blueland a:hover {
 	background-color: #669EFF;
 }
+/*---FOOTER---*/
+.tabella2 {
+	color:white;
+}
+#footertitle {
+	color: white;
+	text-align:center;
+}
+
+.footer1, .footer2, .social{
+	float: left;
+}
+.footer1{
+	padding-left:20px;
+}
+
+.footer2 {
+	padding-left: 90px;
+}
+.social {
+	padding-top:25px;
+	padding-left:320px;
+}
+.footer {
+	position: relative;
+}
+
+
