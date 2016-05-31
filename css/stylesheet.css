@@ -4,11 +4,26 @@ body {
 	font-size: 100%;	
 }
 
+.realbody {
+	width: 1024px;
+	height: 100%;
+}
 .header {
-	color: #002080;
-	width: 100%;
+	background-color:red;
 	height: 100%;
 	top: 0px;
 	left: 0px;
+	margin: auto;
+}
+
+.landmark {
+	background-color: red;
+	width: 250px;
+	
+}
+
+.main {
+	width: 774px;
+	background-color: red;
 	margin: auto;
 }
