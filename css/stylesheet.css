@@ -1,0 +1,14 @@
+body {
+	background-color: #002080;
+	font-family: century gothic;
+	font-size: 100%;	
+}
+
+.header {
+	color: #002080;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+}
