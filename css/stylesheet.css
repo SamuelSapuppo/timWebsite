@@ -84,6 +84,10 @@ body {
 	background-color: #669EFF;
 }
 
+.notallowed a:hover {
+	cursor:not-allowed;
+}
+
 
 /*---FOOTER---*/
 .tabella2 {
@@ -127,7 +131,9 @@ body {
 	width:700px;
 	height:200px;
 }
-.home1 {
+
+/*Slider per immagini, per le impostazioni si rimanda all'altro foglio di stile*/
+#slider {
 	margin-top:20px;
 	width: 696px;
 	height:293px;
@@ -135,15 +141,7 @@ body {
 	border: dotted 2px white;
 }
 
-#fLeft, #circle1, #circle2, #circle3, #circle4, #fRight {
-	padding-top:17%;
-	float: left;
 
-}
-.imgC {
-	margin: 0 auto;
-	padding-top: 50px;
-}
 
 #promoHome, #timV {
 	float: left;
