@@ -84,12 +84,15 @@ body {
 .blueland a:hover {
 	background-color: #669EFF;
 }
+
+
+
 /*---FOOTER---*/
-.tabella2 {
+.footer{
 	color:white;
 }
-#footertitle {
-	color: white;
+
+#footerTitle{
 	text-align:center;
 }
 
@@ -109,6 +112,11 @@ body {
 	padding-top:25px;
 	padding-left:320px;
 }
+
+#quadroPerInfo{
+    margin-right: 200px;
+}
+
 
 
 /*---HOME---*/
