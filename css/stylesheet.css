@@ -21,6 +21,10 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+
+
+/*---LANDMARK---*/
 .landmark, .page {
 	float: left;
 	padding-top: 20px;
@@ -30,14 +34,6 @@ body {
 	height: 100%;
 	
 }
-
-.page {	
-	width: 75%;
-	margin: 0 auto;
-	height: 100%;
-}
-
-/*---LANDMARK---*/
 
 .land {
 	width: 184px;
@@ -85,10 +81,6 @@ body {
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b2c1fde91a14df8ebf93650ddb03b47fc9831be7
 /*---FOOTER---*/
 .footer{
 	color:white;
@@ -115,17 +107,24 @@ body {
 	padding-left:300px;
 }
 
-#quadroPerInfo{
-    margin-right: 200px;
-}
 
 
 
 /*---PAGE GENERIC---*/
+.page {	
+	width: 75%;
+	margin: 0 auto;
+	height: 100%;
+}
+
 .page {
 	margin-bottom: 150px;
 	margin-top:10px;
 }
+
+
+
+
 /*---HOME---*/
 
 .home {
