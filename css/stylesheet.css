@@ -9,13 +9,9 @@ body {
 	font-size: 100%;	
 }
 
-/*---HEADER---*/
-li {
-	list-style: none;
-}
-ul {
-	list-style-type:none;
-}
+/****************/
+/*----HEADER----*/
+/****************/
 .header {
 	height: 100%;
 	top: 0px;
@@ -30,8 +26,16 @@ ul {
 }
 
 
+/******************/
+/*----LANDMARK----*/
+/******************/
+.menu li {
+	list-style: none;
+}
+.menu ul {
+	list-style-type:none;
+}
 
-/*---LANDMARK---*/
 .landmark, .page {
 	float: left;
 	padding-top: 20px;
@@ -92,7 +96,9 @@ ul {
 }
 
 
-/*---FOOTER---*/
+/****************/
+/*----FOOTER----*/
+/****************/
 .footer{
 	color:white;
 }
@@ -121,7 +127,9 @@ ul {
 
 
 
-/*---PAGE GENERIC---*/
+/**********************/
+/*----PAGE GENERIC----*/
+/**********************/
 .page {	
 	width: 75%;
 	margin: 0 auto;
@@ -136,7 +144,9 @@ ul {
 
 
 
-/*---HOME---*/
+/**************/
+/*----HOME----*/
+/**************/
 
 .home {
 	color:white;
@@ -193,6 +203,12 @@ ul {
 #rich {
 	margin-left:20px;
 }
+
+/********************/
+/*----SMART LIFE----*/
+/********************/
+
+
 
 
 
