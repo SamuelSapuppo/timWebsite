@@ -9,6 +9,10 @@ body {
 	font-size: 100%;	
 }
 
+a {
+	text-decoration: none;
+}
+
 /****************/
 /*----HEADER----*/
 /****************/
@@ -207,7 +211,25 @@ body {
 /********************/
 /*----SMART LIFE----*/
 /********************/
+#scopri a:link, #scopri a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;
+	margin-top: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: solid 1px black;
+	text-align: center;
+	display: block;
+	
+}
+#scopri a:hover {
+	background-color: #F5585B;
+}
 
+.smartlifeHome {
+	color: white;
+}
 
 
 
