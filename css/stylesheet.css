@@ -10,6 +10,12 @@ body {
 }
 
 /*---HEADER---*/
+li {
+	list-style: none;
+}
+ul {
+	list-style-type:none;
+}
 .header {
 	height: 100%;
 	top: 0px;
