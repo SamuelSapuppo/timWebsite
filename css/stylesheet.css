@@ -1,6 +1,7 @@
 body {
 	background-color:#002080;
 	background-image: -moz-linear-gradient(top, #002080 85%, #0e73d4 100%);
+	background-image: linear-gradient(top, #002080 85%, #0e73d4 100%);
 	margin: 0 auto;
 	width: 1024px;
 	height: 100%;	
@@ -9,6 +10,12 @@ body {
 }
 
 /*---HEADER---*/
+li {
+	list-style: none;
+}
+ul {
+	list-style-type:none;
+}
 .header {
 	height: 100%;
 	top: 0px;
