@@ -95,6 +95,15 @@ a {
 	background-color: #669EFF;
 }
 
+.submenud, .submenua, .submenus {
+	background-color: #FF6854;
+	color: black;
+}
+
+.submenuw {
+	background-color: #99FFFF;
+	color: black;
+}
 .notallowed a:hover {
 	cursor:not-allowed;
 }
@@ -227,14 +236,32 @@ a {
 	background-color: #F5585B;
 }
 
+#scopri {
+	padding-left: 350px;
+}
+
 .smartlifeHome {
 	color: white;
 }
+#sltitle, #tvent, #cef, #seb, #sap {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.tvent, .cef, .seb, .sap {
+	margin-top: 40px;
+}
+
+.cef, .sap {
+	padding-left: 120px;
+}
+	
 
 
 
-
-/*---DISPOSITIVI---*/
+/*********************/
+/*----DISPOSITIVI----*/
+/*********************/
 
 .smartphoneTelefoni, .tabletComputer, .modemNetworking, .tvSmartLiving{
 	position:relative;
