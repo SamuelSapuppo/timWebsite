@@ -78,7 +78,7 @@ a {
 
 .blueland {
 	padding-top: 95px;
-	padding-left:10px;
+	padding-left:7px;
 }
 
 .blueland a:link, .blueland a:visited {
@@ -94,18 +94,60 @@ a {
 .blueland a:hover {
 	background-color: #669EFF;
 }
+.submenus, .submenud {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 193px;
+	
+}
 
-.submenus a:link, .submenus a:visited {
+.submenuw {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 121px;
+}
+
+.submenua {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 200px;
+}
+
+
+.submenus li, .submenud li, .submenua li {
+	line-height: 1;
+}
+.submenus a:link, .submenus a:visited, .submenud a:link, .submenud a:visited, .submenua a:link, .submenua a:visited {
 	padding-left: 2px;
 	font-size:15px;
 	background-color: #FF6854; 
 	color: black;
 	border: none;
+	text-align: left;
 }
-.submenus a:hover{
+.submenus a:hover, .submenud a:hover, .submenua a:hover{
 	background-color: #FF6854;
 	color: black;
 	border: none;
+	text-align: left;
+}
+
+.submenuw a:link, .submenuw a:visited {
+	padding-left: 2px;
+	font-size:15px;
+	background-color: #99FFFF; 
+	color: black;
+	border: none;
+	text-align: left;
+}
+.submenuw a:hover {
+	background-color: #99FFFF;
+	color: black;
+	border: none;
+	text-align: left;
 }
 
 .submenud, .submenua, .submenus {
@@ -258,12 +300,6 @@ a {
 	padding-left: 120px;
 }
 
-.submenus {
-	padding-top: 10px;
-	width : 188px;
-	height: 193px;
-	
-}
 	
 	
 

@@ -25,6 +25,9 @@ function clickPageLinks() {
             manager(args);
         }
 		$(".submenus").hide();
+		$(".submenud").hide();
+		$(".submenua").hide();
+		$(".submenuw").hide();
 
 
     };
@@ -51,14 +54,30 @@ function manager(args) {
             //POI METTERE SWITCH CASE
 			
 			switch(page) {
-				case "home": {
-					clickPageLinks();
-					
-				}
+				
 				
 				case "smartlife": {
 					clickPageLinks();
+					$('.sbiri').css('margin-top', '');
 					$(".submenus").show();
+					
+					break;
+				}
+				case "devices": {
+					clickPageLinks();
+					$(".submenud").show();
+					
+					break;
+				}
+				case "assistance": {
+					clickPageLinks();
+					$(".submenua").show();
+					
+					break;
+				}
+				case "whoweare": {
+					clickPageLinks();
+					$(".submenuw").show();
 					
 					break;
 				}
