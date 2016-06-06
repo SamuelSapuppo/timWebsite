@@ -58,7 +58,6 @@ function manager(args) {
 				
 				case "smartlife": {
 					clickPageLinks();
-					$('.sbiri').css('margin-top', '');
 					$(".submenus").show();
 					
 					break;

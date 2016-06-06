@@ -202,9 +202,6 @@ a {
 	width: 75%;
 	margin: 0 auto;
 	height: 100%;
-}
-
-.page {
 	margin-bottom: 150px;
 	margin-top:10px;
 }
@@ -356,20 +353,71 @@ a {
 	padding-top: 10px;
 }
 
+/*******************/
+/*----CHI SIAMO----*/
+/*******************/
+
+.whoweare {
+	color:white;
+	font-size: 15px;
+	padding-left: 30px;
+}
+
+#wwavideo {
+	padding-left: 130px;
+	width: 456px;
+	height: 272px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+}
+
+.whoweare h3 {
+	font-size: 18px;
+}
+
+#meeting {
+	padding-left: 130px;
+	width: 479px;
+	height: 184px;
+	margin-top: 20px;
+}
+#meetingtxt {
+	padding-left: 170px;
+}
+
+#valori {
+	padding-top: 10px;
+}
+
+.val1, .val2, .val3, .val4 {
+	margin-top:20px;
+}
+
+#val1img, #val1txt {
+	float: left;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+#val2img, #val2txt {
+	float: left;
+	padding-right: 20px;
+	padding-top: 20px;
+}
 
 
+#val3img, #val3txt {
+	float: left;
+	padding-top: 20px;
+	padding-right: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+#val4img, #val4txt {
+	float: left;
+	padding-top: 20px;
+	padding-right: 20px;
+}
 
 
 
