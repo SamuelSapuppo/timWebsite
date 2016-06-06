@@ -170,17 +170,6 @@ a {
 	height:200px;
 }
 
-/*Slider per immagini, per le impostazioni si rimanda all'altro foglio di stile*/
-#slider {
-	margin-top:20px;
-	width: 696px;
-	height:293px;
-	background-color: #5faacf;
-	border: dotted 2px white;
-}
-
-
-
 #promoHome, #timV {
 	float: left;
 	margin-top:20px;
@@ -256,14 +245,6 @@ a {
 	padding-left: 120px;
 }
 	
-
-.tvent, .cef, .seb, .sap {
-	margin-top: 40px;
-}
-
-.cef, .sap {
-	padding-left: 120px;
-}
 	
 
 
