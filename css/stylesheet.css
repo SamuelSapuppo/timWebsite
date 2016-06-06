@@ -207,13 +207,48 @@ body {
 /********************/
 /*----SMART LIFE----*/
 /********************/
+#scopri a:link, #scopri a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;
+	margin-top: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: solid 1px black;
+	text-align: center;
+	display: block;
+	
+}
+#scopri a:hover {
+	background-color: #F5585B;
+}
+
+#scopri {
+	padding-left: 350px;
+}
+
+.smartlifeHome {
+	color: white;
+}
+#sltitle, #tvent, #cef, #seb, #sap {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.tvent, .cef, .seb, .sap {
+	margin-top: 40px;
+}
+
+.cef, .sap {
+	padding-left: 120px;
+}
+	
 
 
 
-
-
-/*---DISPOSITIVI---*/
-
+/*********************/
+/*----DISPOSITIVI----*/
+/*********************/
 .smartphoneTelefoni, .tabletComputer, .modemNetworking, .tvSmartLiving{
 	position:relative;
 	background-color:#75A3FF;
