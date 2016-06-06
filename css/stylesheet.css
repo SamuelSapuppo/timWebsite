@@ -9,6 +9,10 @@ body {
 	font-size: 100%;	
 }
 
+a {
+	text-decoration: none;
+}
+
 /****************/
 /*----HEADER----*/
 /****************/
@@ -91,6 +95,15 @@ body {
 	background-color: #669EFF;
 }
 
+.submenud, .submenua, .submenus {
+	background-color: #FF6854;
+	color: black;
+}
+
+.submenuw {
+	background-color: #99FFFF;
+	color: black;
+}
 .notallowed a:hover {
 	cursor:not-allowed;
 }
@@ -244,6 +257,14 @@ body {
 }
 	
 
+.tvent, .cef, .seb, .sap {
+	margin-top: 40px;
+}
+
+.cef, .sap {
+	padding-left: 120px;
+}
+	
 
 
 /*********************/

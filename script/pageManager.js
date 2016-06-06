@@ -49,8 +49,21 @@ function manager(args) {
             // after loading the whole page we should load the page manager for links inside the main div, this is because
             // the callback function
             //POI METTERE SWITCH CASE
+			switch(page) {
+				case "smartlife": {
+					$(".submenus").css({
+						"padding-top":"10px",
+						"width" : "188px",
+						"height": "193px",						
+					});	
+					$("#assistance").css("margin-top:0px");
+					$(".submenus").html("<ul><li>Tv & entertainment</li><li>Casa & famiglia</li><li>Sport & benessere</li><li>Servizi alla persona</li></ul>");
+					
                     clickPageLinks();
-            
+					break;
+				}
+				default: clickPageLinks(); break;
+            }
             //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
             // scroll to top when loading a new page
