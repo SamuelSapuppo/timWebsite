@@ -24,7 +24,7 @@ function clickPageLinks() {
 
             manager(args);
         }
-
+		$(".submenus").hide();
 
 
     };
@@ -42,23 +42,23 @@ function manager(args) {
     // enable script for calls to external php
    // $.getScript('js/ajaxCalls.js', function(){
         // load the page dinamycally inside the template
+		
         $( ".page" ).load(page+'.html', function() {
 
             //************** SPECIFIC PAGE FUNCTIONS ****************//
             // after loading the whole page we should load the page manager for links inside the main div, this is because
             // the callback function
             //POI METTERE SWITCH CASE
+			
 			switch(page) {
+				case "home": {
+					clickPageLinks();
+					
+				}
 				
 				case "smartlife": {
 					clickPageLinks();
-					$(".submenus").css({
-						"padding-top":"10px",
-						"width" : "188px",
-						"height": "193px",						
-					});	
-					$("#assistance").css("margin-top:0px");
-					$(".submenus").html("<ul><li>Tv & entertainment</li><li>Casa & famiglia</li><li>Sport & benessere</li><li>Servizi alla persona</li></ul>");
+					$(".submenus").show();
 					
 					break;
 				}
