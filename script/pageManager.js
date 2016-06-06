@@ -37,6 +37,7 @@ function manager(args) {
 
     // get the page (0 in the array of args)
         var page = args.split('&')[0];
+		var flagd=false, flagsl=false, flaga=false;  
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
     // different values of special
@@ -45,7 +46,8 @@ function manager(args) {
     // enable script for calls to external php
    // $.getScript('js/ajaxCalls.js', function(){
         // load the page dinamycally inside the template
-		
+
+								
         $( ".page" ).load(page+'.html', function() {
 
             //************** SPECIFIC PAGE FUNCTIONS ****************//
@@ -53,25 +55,30 @@ function manager(args) {
             // the callback function
             //POI METTERE SWITCH CASE
 			
+			
 			switch(page) {
-				
-				
-				case "smartlife": {
-					clickPageLinks();
-					$('.sbiri').css('margin-top', '');
-					$(".submenus").show();
-					
-					break;
-				}
+								
 				case "devices": {
 					clickPageLinks();
 					$(".submenud").show();
+					$('.smartlife_page').css('margin-top', '-4px');
+					flagd=1;
+					
+					break;
+				}
+				case "smartlife": {
+					clickPageLinks();
+					$(".submenus").show();
+					$('.assistance_page').css('margin-top', '-4px');
+					flagsl=1;
 					
 					break;
 				}
 				case "assistance": {
 					clickPageLinks();
 					$(".submenua").show();
+					$('.promotions_page').css('margin-top', '-4px');
+					flaga=1;
 					
 					break;
 				}
@@ -82,6 +89,7 @@ function manager(args) {
 					break;
 				}
 				default: clickPageLinks(); break;
+				
             }
             //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
