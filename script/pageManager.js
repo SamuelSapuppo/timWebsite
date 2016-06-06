@@ -28,7 +28,6 @@ function clickPageLinks() {
 
 
     };
-
 }
 
 function manager(args) {
@@ -50,7 +49,9 @@ function manager(args) {
             // the callback function
             //POI METTERE SWITCH CASE
 			switch(page) {
+				
 				case "smartlife": {
+					clickPageLinks();
 					$(".submenus").css({
 						"padding-top":"10px",
 						"width" : "188px",
@@ -59,7 +60,6 @@ function manager(args) {
 					$("#assistance").css("margin-top:0px");
 					$(".submenus").html("<ul><li>Tv & entertainment</li><li>Casa & famiglia</li><li>Sport & benessere</li><li>Servizi alla persona</li></ul>");
 					
-                    clickPageLinks();
 					break;
 				}
 				default: clickPageLinks(); break;
