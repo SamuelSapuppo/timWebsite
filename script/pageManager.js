@@ -28,10 +28,16 @@ function clickPageLinks() {
 		$(".submenud").hide();
 		$(".submenua").hide();
 		$(".submenuw").hide();
+		$('.smartlife_page').css('margin-top', '4px');
+		$('.assistance_page').css('margin-top', '4px');
+		$('.promotions_page').css('margin-top', '4px');
+		$('.thegroup_page').css('margin-top', '4px');
 
 
     };
 }
+
+
 
 function manager(args) {
 
@@ -86,6 +92,7 @@ function manager(args) {
 				case "whoweare": {
 					clickPageLinks();
 					$(".submenuw").show();
+					$('.thegroup_page').css('margin-top', '-4px');
 					
 					break;
 				}
