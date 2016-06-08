@@ -32,6 +32,8 @@ function clickPageLinks() {
 		$('.assistance_page').css('margin-top', '4px');
 		$('.promotions_page').css('margin-top', '4px');
 		$('.thegroup_page').css('margin-top', '4px');
+		$('#li01').css('font-weight', 'normal');
+		$('#li04').css('font-weight', 'normal');
 
 
     };
@@ -92,7 +94,6 @@ function manager(args) {
 			switch(page) {
 								
 				case "devices": {
-					clickPageLinks();
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');
 
@@ -100,21 +101,18 @@ function manager(args) {
 					break;
 				}
 				case "smartlife": {
-					clickPageLinks();
 					$(".submenus").show();
 					$('.assistance_page').css('margin-top', '-4px');
 					
 					break;
 				}
 				case "assistance": {
-					clickPageLinks();
 					$(".submenua").show();
 					$('.promotions_page').css('margin-top', '-4px');
 					
 					break;
 				}
 				case "whoweare": {
-					clickPageLinks();
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
 					
@@ -122,11 +120,19 @@ function manager(args) {
 				}
 				case "smartphoneTelefoni": {
 					$(".submenud").show();
-					clickPageLinks2();
+					$('.smartlife_page').css('margin-top', '-4px');
+					$('#li01').css('font-weight', 'bold');
 					
 					break;
 				}
-				default: clickPageLinks(); break;
+				case "tvSmartLiving": {
+					$(".submenud").show();
+					$('.smartlife_page').css('margin-top', '-4px');
+					$('#li04').css('font-weight', 'bold');
+					
+					break;
+				}
+				default: break;
 				
             }
             //************** END SPECIFIC PAGE FUNCTIONS ***********//
