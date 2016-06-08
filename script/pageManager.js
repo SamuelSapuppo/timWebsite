@@ -38,12 +38,39 @@ function clickPageLinks() {
 }
 
 
+function clickPageLinks2() {
+
+    // this event is fired everytime you click a link or when pressing back/forward browser buttons
+    window.onpopstate = function() {
+        var url = window.location.href;
+
+        // extract the string after #
+        var args = url.split('#')[1];
+
+        // get the page (0 in the array of args)
+        var page = args.split('&')[0];
+
+        if(page!='') {
+
+            // the element in the header to highlight is a li element that contain as class the "pagename"_page
+            var newElm = $('class*="'+page+'_page"');
+
+            // remove class from the previous active menu element
+            var prevElm = $('class*="active"');
+            prevElm.removeClass('active');
+
+            newElm.addClass('active');
+
+            manager(args);
+        }
+    };
+}
+
 
 function manager(args) {
 
     // get the page (0 in the array of args)
         var page = args.split('&')[0];
-		var flagd=false, flagsl=false, flaga=false;  
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
     // different values of special
@@ -68,7 +95,6 @@ function manager(args) {
 					clickPageLinks();
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');
-					flagd=1;
 
 					
 					break;
@@ -77,7 +103,6 @@ function manager(args) {
 					clickPageLinks();
 					$(".submenus").show();
 					$('.assistance_page').css('margin-top', '-4px');
-					flagsl=1;
 					
 					break;
 				}
@@ -85,7 +110,6 @@ function manager(args) {
 					clickPageLinks();
 					$(".submenua").show();
 					$('.promotions_page').css('margin-top', '-4px');
-					flaga=1;
 					
 					break;
 				}
@@ -93,6 +117,12 @@ function manager(args) {
 					clickPageLinks();
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
+					
+					break;
+				}
+				case "smartphoneTelefoni": {
+					$(".submenud").show();
+					clickPageLinks2();
 					
 					break;
 				}
