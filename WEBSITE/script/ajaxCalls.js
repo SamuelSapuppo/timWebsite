@@ -26,7 +26,7 @@ function getTvent(info) {
                     $(".tvsertimv").html(content);
                 break;
 				case '2':
-                    $(".tvsertims").html(content);
+                    $(".tvsertimv").append(content);
                 break;
                 case '3':
                     $(".musicser").html(content);
