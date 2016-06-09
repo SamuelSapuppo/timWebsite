@@ -1,120 +1,33 @@
 <!DOCTYPE html>
     <!--Da qui inizia il codice del filtro-->
-    <div class="box-filtro">
-                <h4 class="title-filtra">FILTRA PER:</h4>
-				<div id="filter-panel1" class="filtro">
-                        <h4 class="panel-title">CATEGORIA</h4>
-                    <div id="Categoria" class="panel-collapse collpase in">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Tutti
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Smartphone
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">iPhone
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Altro
-                                </label>
-                            </div>
-                    </div>
-                </div>
-				<div id="filter-panel2" class="filtro">
-                        <h4 class="panel-title">PREZZO</h4>
-                    <div id="Prezzo" class="panel-collapse collpase in">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox"><100 €
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">100 - 400€
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">>400 €
-                                </label>
-                            </div>
-                    </div>
-                </div>
-				<div id="filter-panel3" class="filtro">
-                        <h4 class="panel-title">MARCA</h4>
-                    <div id="Marca" class="panel-collapse collpase in">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Apple
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">BlackBerry
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Huawei
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">Nokia
-                                </label>
-                            </div>
-                    </div>
-                </div>
-                <div id="filter-panel4" class="filtro">
-                        <h4 class="panel-title">MEMORIA</h4>
-                    <div id="Memoria" class="panel-collapse collpase in">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">8 Gb
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">16 Gb
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">32 Gb
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">64 Gb
-                                </label>
-                            </div>
-                    </div>
-                </div>
-				<div id="filter-panel5" class="filtro">
-                        <h4 class="panel-title">DISPLAY</h4>
-                    <div id="Display" class="panel-collapse collpase in">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">< 3"
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">3" - 5"
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="ez-checkbox">>5"
-                                </label>
-                            </div>
-                    </div>
-                </div>
-    </div>
+    
+<div class="filtroST">
+<table class="tabFiltroST">
+<h4 class="titolo_filtro">FILTRA PER:</h4>
+  <tr>
+    <th>CATEGORIA</th>
+    <th>PREZZO</th>
+	<th>MARCA</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="checkCatTSL" id="ckTSL1" >Tutti</td>
+    <td><input type="checkbox" class="checkPrzTSL" id="ckTSL5" >< 100 €</td>
+	<td><input type="checkbox" class="checkMrcTSL" id="ckTSL9">D-Link</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" class="checkCatTSL" id="ckTSL2" >Smart-TV</td>
+    <td><input type="checkbox" class="checkPrzTSL" id="ckTSL6" >100 - 300 €</td>
+	<td><input type="checkbox" class="checkMrcTSL" id="ckTSL10" >Samsung</td>
+  </tr>
+   <tr>
+    <td><input type="checkbox" class="checkCatTSL" id="ckTSL3" >Smartwatch</td>
+    <td><input type="checkbox" class="checkPrzTSL" id="ckTSL7" >300 - 400 €</td>	<td></td>
+	<td></td>
+  </tr>
+   <tr>
+    <td><input type="checkbox" class="ez-checkbox" id="ckTSL4" >Altro</td>
+    <td><input type="checkbox" class="ez-checkbox" id="ckTSL8" >> 400 €</td>
+	<td></td>
+  </tr>
+</table>
+</div>
