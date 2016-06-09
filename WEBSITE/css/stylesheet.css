@@ -29,6 +29,14 @@ a {
 	height: 100%;
 }
 
+.nav a{
+	color:#66FFFF;
+	font-size:13px;
+}
+#navlast {
+	font-weight: bold;
+}
+
 
 /******************/
 /*----LANDMARK----*/
@@ -189,6 +197,11 @@ a {
 #social {
 	padding-top:25px;
 	padding-left:300px;
+}
+
+#credits {
+	color: white;
+	font-size: 10px;
 }
 
 
@@ -367,7 +380,6 @@ a {
 	width: 456px;
 	height: 272px;
 	margin-top: 20px;
-	margin-bottom: 20px;
 	
 }
 
@@ -393,37 +405,49 @@ a {
 	margin-top:20px;
 }
 
-#val1img, #val1txt {
+#val1img {
 	float: left;
 	padding-right: 20px;
 	padding-top: 20px;
 }
 
-#val2img, #val2txt {
+#val2img{
+	float: right;
+	padding-right: 60px;
+	padding-top: 20px;
+}
+
+
+#val3img {
 	float: left;
-	padding-right: 20px;
-	padding-top: 20px;
-}
-
-
-#val3img{
-	left:100px;
 	padding-top: 20px;
 	padding-right: 20px;
 }
-#val3txt {
+
+#val4img {
 	float: right;
 	padding-top: 20px;
-	padding-right: 20px;
+	padding-right: 60px;
 }
 
-#val4img, #val4txt {
+.whoweare p {
+	padding-top:20px;
+}
+
+/********************/
+/*----TV ENT CAT----*/
+/********************/
+.tvEntCat {
+	color: white;
+	font-size: 16px;
+}
+.tvEntCat h3, #tetext {
+	font-size: 18px;
+}
+
+#tetext {
 	float: left;
-	padding-top: 20px;
-	padding-right: 20px;
 }
-
-
 
 
 

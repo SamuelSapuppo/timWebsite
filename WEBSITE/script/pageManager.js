@@ -24,55 +24,30 @@ function clickPageLinks() {
 
             manager(args);
         }
-		$(".submenus").hide();
-		$(".submenud").hide();
-		$(".submenua").hide();
-		$(".submenuw").hide();
-		$('.smartlife_page').css('margin-top', '4px');
-		$('.assistance_page').css('margin-top', '4px');
-		$('.promotions_page').css('margin-top', '4px');
-		$('.thegroup_page').css('margin-top', '4px');
-		$('#li01').css('font-weight', 'normal');
-		$('#li04').css('font-weight', 'normal');
+		restore();
 
 
     };
 }
 
-
-function clickPageLinks2() {
-
-    // this event is fired everytime you click a link or when pressing back/forward browser buttons
-    window.onpopstate = function() {
-        var url = window.location.href;
-
-        // extract the string after #
-        var args = url.split('#')[1];
-
-        // get the page (0 in the array of args)
-        var page = args.split('&')[0];
-
-        if(page!='') {
-
-            // the element in the header to highlight is a li element that contain as class the "pagename"_page
-            var newElm = $('class*="'+page+'_page"');
-
-            // remove class from the previous active menu element
-            var prevElm = $('class*="active"');
-            prevElm.removeClass('active');
-
-            newElm.addClass('active');
-
-            manager(args);
-        }
-    };
+function restore(){
+	$(".submenus").hide();
+	$(".submenud").hide();
+	$(".submenua").hide();
+	$(".submenuw").hide();
+	$('.smartlife_page').css('margin-top', '4px');
+	$('.assistance_page').css('margin-top', '4px');
+	$('.promotions_page').css('margin-top', '4px');
+	$('.thegroup_page').css('margin-top', '4px');
 }
+
 
 
 function manager(args) {
 
     // get the page (0 in the array of args)
         var page = args.split('&')[0];
+		  
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
     // different values of special
@@ -94,45 +69,40 @@ function manager(args) {
 			switch(page) {
 								
 				case "devices": {
+					clickPageLinks();
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');
+					//$(".nav").html("<a href="index.html">HOME> </a> <a id="navlast" href="#devices">DISPOSITIVI</a>");
+					
 
 					
 					break;
 				}
 				case "smartlife": {
+					clickPageLinks();
 					$(".submenus").show();
 					$('.assistance_page').css('margin-top', '-4px');
+					
 					
 					break;
 				}
 				case "assistance": {
+					clickPageLinks();
 					$(".submenua").show();
 					$('.promotions_page').css('margin-top', '-4px');
+					
 					
 					break;
 				}
 				case "whoweare": {
+					clickPageLinks();
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
 					
 					break;
 				}
-				case "smartphoneTelefoni": {
-					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');
-					$('#li01').css('font-weight', 'bold');
-					
-					break;
-				}
-				case "tvSmartLiving": {
-					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');
-					$('#li04').css('font-weight', 'bold');
-					
-					break;
-				}
-				default: break;
+			
+				default: clickPageLinks(); break;
 				
             }
             //************** END SPECIFIC PAGE FUNCTIONS ***********//
