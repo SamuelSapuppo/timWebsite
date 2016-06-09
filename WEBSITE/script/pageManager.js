@@ -19,12 +19,17 @@ function clickPageLinks() {
             // remove class from the previous active menu element
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
-
-            newElm.addClass('active');
-
+			newElm.addClass('active');
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf') {
+				var preElm = $('li[class*="subm"]');
+				preElm.removeClass('subm');
+				newElm.addClass('subm');
+			}
+			else 
+				restore();
             manager(args);
         }
-		restore();
+		
 
 
     };
@@ -54,7 +59,7 @@ function manager(args) {
     //var special = parts[1];
 
     // enable script for calls to external php
-   // $.getScript('js/ajaxCalls.js', function(){
+    $.getScript('script/ajaxCalls.js', function(){
         // load the page dinamycally inside the template
 
 								
@@ -63,16 +68,20 @@ function manager(args) {
             //************** SPECIFIC PAGE FUNCTIONS ****************//
             // after loading the whole page we should load the page manager for links inside the main div, this is because
             // the callback function
-            //POI METTERE SWITCH CASE
-			
-			
+        			
 			switch(page) {
+				case "home": {
+					clickPageLinks();
+					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');
+					break;
+				}
 								
 				case "devices": {
 					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');
-					//$(".nav").html("<a href="index.html">HOME> </a> <a id="navlast" href="#devices">DISPOSITIVI</a>");
+			
 					
 
 					
@@ -80,6 +89,7 @@ function manager(args) {
 				}
 				case "smartlife": {
 					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife" id="navlast">SMART LIFE</a>');
 					$(".submenus").show();
 					$('.assistance_page').css('margin-top', '-4px');
 					
@@ -88,6 +98,7 @@ function manager(args) {
 				}
 				case "assistance": {
 					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance" id="navlast">ASSISTENZA</a>');
 					$(".submenua").show();
 					$('.promotions_page').css('margin-top', '-4px');
 					
@@ -96,9 +107,32 @@ function manager(args) {
 				}
 				case "whoweare": {
 					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#whoweare" id="navlast">CHI SIAMO</a>');
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
 					
+					
+					break;
+				}
+				case "tvent_cat": {
+					getTvent('1');
+					getTvent('2');
+					getTvent('3');
+					getTvent('4');
+					getTvent('5');
+					getTvent('6');
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat" id="navlast">Tv & Entertainment</a>');
+					clickPageLinks();
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					break;
+				}
+				
+				case "smartphoneTelefoni": {
+					clickPageLinks();
+					$(".submenud").show();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
+					$('.smartlife_page').css('margin-top', '-4px');
 					break;
 				}
 			
@@ -110,8 +144,8 @@ function manager(args) {
             // scroll to top when loading a new page
             window.scrollTo(0,0);
         });
-   }
-
-   // });
    
 
+ });
+   
+}

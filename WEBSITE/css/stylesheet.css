@@ -166,6 +166,9 @@ a {
 	background-color: #99FFFF;
 	color: black;
 }
+.subm{
+	font-weight: bold;
+}
 .notallowed a:hover {
 	cursor:not-allowed;
 }
@@ -404,6 +407,9 @@ a {
 .val1, .val2, .val3, .val4 {
 	margin-top:20px;
 }
+#val1txt, #val2txt, #val3txt, #val4txt {
+	font-style: italic;
+}
 
 #val1img {
 	float: left;
@@ -433,6 +439,9 @@ a {
 .whoweare p {
 	padding-top:20px;
 }
+#li14 {
+	font-weight:bold;
+}
 
 /********************/
 /*----TV ENT CAT----*/
@@ -440,13 +449,54 @@ a {
 .tvEntCat {
 	color: white;
 	font-size: 16px;
+	margin-top: -10px;
 }
 .tvEntCat h3, #tetext {
 	font-size: 18px;
 }
-
-#tetext {
+#teico {
 	float: left;
+	padding-right: 50px;
+	padding-left: 30px;
+}
+
+#teimg {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.tvsertimv, .tvsertims, .musicser, .readingser, .gamingser {
+	margin-bottom:10px;
+}
+
+#tvislogo, #tskylogo, #tmuslogo, #trealogo, #tgamlogo, #tsealogo {
+	width: 200px;
+	height: auto;
+}
+
+#tvistxt, #tskytxt, #tmustxt, #treatxt, #tgamtxt, #tseatxt {
+	float: left;
+}
+
+#tvisimg {
+	width: 226px;
+	height: 138px;
+}
+#tskyimg {
+	width: 235px;
+	height: 142px;
+}
+#tmusimg, #treaimg, #tgamimg, #tseaimg, #tseaimg {
+	width: 190px;
+	height: 139px;
+	padding-left: 30px;
+}
+
+#tgamimg {
+	padding-left: 50px;
+}
+#tseaimg {
+	padding-left: 100px;
 }
 
 
