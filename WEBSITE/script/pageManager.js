@@ -23,15 +23,13 @@ function clickPageLinks() {
 			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
-			}
-			
-			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf')
 				newElm.addClass('subm');
-			
-
+			}
+			else 
+				restore();
             manager(args);
         }
-		restore();
+		
 
 
     };
@@ -61,7 +59,7 @@ function manager(args) {
     //var special = parts[1];
 
     // enable script for calls to external php
-   // $.getScript('js/ajaxCalls.js', function(){
+    $.getScript('script/ajaxCalls.js', function(){
         // load the page dinamycally inside the template
 
 								
@@ -70,9 +68,7 @@ function manager(args) {
             //************** SPECIFIC PAGE FUNCTIONS ****************//
             // after loading the whole page we should load the page manager for links inside the main div, this is because
             // the callback function
-            //POI METTERE SWITCH CASE
-			
-			
+        			
 			switch(page) {
 								
 				case "devices": {
@@ -110,6 +106,12 @@ function manager(args) {
 					break;
 				}
 				case "tvent_cat": {
+					getTvent('1');
+					getTvent('2');
+					getTvent('3');
+					getTvent('4');
+					getTvent('5');
+					getTvent('6');
 					clickPageLinks();
 					$(".submenus").show();	
 					$('.assistance_page').css('margin-top', '-4px');
@@ -131,8 +133,8 @@ function manager(args) {
             // scroll to top when loading a new page
             window.scrollTo(0,0);
         });
-   }
-
-   // });
    
 
+ });
+   
+}

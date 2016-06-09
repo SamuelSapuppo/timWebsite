@@ -459,9 +459,40 @@ a {
 	margin-bottom: 20px;
 }
 
-.tvser, .musicser, .readingser, .gamingser {
-	margin-bottom:30px;
+.tvsertimv, .tvsertims, .musicser, .readingser, .gamingser {
+	margin-bottom:10px;
 }
+
+#tvislogo, #tskylogo, #tmuslogo, #trealogo, #tgamlogo, #tsealogo {
+	width: 200px;
+	height: auto;
+}
+
+#tvistxt, #tskytxt, #tmustxt, #treatxt, #tgamtxt, #tseatxt {
+	float: left;
+}
+
+#tvisimg {
+	width: 226px;
+	height: 138px;
+}
+#tskyimg {
+	width: 235px;
+	height: 142px;
+}
+#tmusimg, #treaimg, #tgamimg, #tseaimg, #tseaimg {
+	width: 190px;
+	height: 139px;
+	padding-left: 30px;
+}
+
+#tgamimg {
+	padding-left: 50px;
+}
+#tseaimg {
+	padding-left: 100px;
+}
+
 
 
 
