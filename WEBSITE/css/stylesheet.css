@@ -1,0 +1,458 @@
+body {
+	background-color:#002080;
+	background-image: -moz-linear-gradient(top, #002080 85%, #0e73d4 100%);
+	background-image: linear-gradient(top, #002080 85%, #0e73d4 100%);
+	margin: 0 auto;
+	width: 1024px;
+	height: 100%;	
+	font-family: century gothic;
+	font-size: 100%;	
+}
+
+a {
+	text-decoration: none;
+}
+
+/****************/
+/*----HEADER----*/
+/****************/
+.header {
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+}
+
+.nav a{
+	color:#66FFFF;
+	font-size:13px;
+}
+#navlast {
+	font-weight: bold;
+}
+
+
+/******************/
+/*----LANDMARK----*/
+/******************/
+.menu li {
+	list-style: none;
+}
+.menu ul {
+	list-style-type:none;
+}
+
+.landmark, .page {
+	float: left;
+	padding-top: 20px;
+}
+.landmark {
+	width: 25%;
+	height: 100%;
+	
+}
+
+.land {
+	width: 184px;
+	height: 30px;
+	padding-top:10px;
+}
+
+.redland {
+	padding-left: 10px;
+}
+
+.redland a:link, .redland a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;
+	margin-top: 4px;
+	padding-top:10px;
+	border: solid 2px white;
+	text-align: center;
+	display: block;
+	
+}
+.redland a:hover {
+	background-color: #F5585B;
+}
+
+
+.blueland {
+	padding-top: 95px;
+	padding-left:7px;
+}
+
+.blueland a:link, .blueland a:visited {
+	font-size:110%;
+	margin-top:4px;
+	color: white;
+	border: solid 2px white;
+	text-align: center;
+	background-color: #3366FF;
+	display: block;
+}
+
+.blueland a:hover {
+	background-color: #669EFF;
+}
+.submenus, .submenud {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 193px;
+	
+}
+
+.submenuw {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 121px;
+}
+
+.submenua {
+	display: none;
+	padding-top: 5px;
+	width : 188px;
+	height: 200px;
+}
+
+.submenus li, .submenud li, .submenua li {
+	line-height: 1;
+}
+.submenus a:link, .submenus a:visited, .submenud a:link, .submenud a:visited, .submenua a:link, .submenua a:visited {
+	padding-left: 2px;
+	font-size:15px;
+	background-color: #FF6854; 
+	color: black;
+	border: none;
+	text-align: left;
+}
+.submenus a:hover, .submenud a:hover, .submenua a:hover{
+	background-color: #FF6854;
+	color: black;
+	border: none;
+	text-align: left;
+}
+
+.submenuw a:link, .submenuw a:visited {
+	padding-left: 2px;
+	font-size:15px;
+	background-color: #99FFFF; 
+	color: black;
+	border: none;
+	text-align: left;
+}
+.submenuw a:hover {
+	background-color: #99FFFF;
+	color: black;
+	border: none;
+	text-align: left;
+}
+
+.submenud, .submenua, .submenus {
+	background-color: #FF6854;
+	color: black;
+}
+
+.submenuw {
+	background-color: #99FFFF;
+	color: black;
+}
+.notallowed a:hover {
+	cursor:not-allowed;
+}
+
+
+/****************/
+/*----FOOTER----*/
+/****************/
+.footer{
+	color:white;
+}
+
+#footerTitle{
+	text-align:center;
+}
+
+#footer1, #footer2, #social{
+	float: left;
+}
+
+#footer1{
+	padding-left:20px;
+}
+
+#footer2 {
+	padding-left: 90px;
+}
+
+#social {
+	padding-top:25px;
+	padding-left:300px;
+}
+
+#credits {
+	color: white;
+	font-size: 10px;
+}
+
+
+
+
+/**********************/
+/*----PAGE GENERIC----*/
+/**********************/
+.page {	
+	width: 75%;
+	margin: 0 auto;
+	height: 100%;
+	margin-bottom: 150px;
+	margin-top:10px;
+}
+
+
+
+
+/**************/
+/*----HOME----*/
+/**************/
+
+.home {
+	color:#fff;
+
+}
+#videoHome {
+	width:700px;
+	height:200px;
+}
+
+#promoHome, #timV {
+	float: left;
+	margin-top:20px;
+	width: 336px;
+	height: 276px;
+	border: dotted 2px white;
+	background-color: #FF6854;
+}
+#timV {
+	margin-left: 20px;
+}
+
+#newsH {
+	margin-top: 300px;
+	width: 696px;
+	height: 88px;
+	background-color: #5faacf;
+	border: dotted 2px white;
+}
+
+#newsHome {
+	padding-top:7px;
+}
+
+#assis, #rich {
+	margin-top:10px;
+	border: dotted 2px white;
+	width: 336px;
+	height: 168px;
+	float: left;
+}
+
+#rich {
+	margin-left:20px;
+}
+
+/********************/
+/*----SMART LIFE----*/
+/********************/
+#scopri a:link, #scopri a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;
+	margin-top: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: solid 1px black;
+	text-align: center;
+	display: block;
+	
+}
+#scopri a:hover {
+	background-color: #F5585B;
+}
+
+#scopri {
+	padding-left: 350px;
+}
+
+.smartlifeHome {
+	color: white;
+}
+#sltitle, #tvent, #cef, #seb, #sap {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.tvent, .cef, .seb, .sap {
+	margin-top: 40px;
+}
+
+.cef, .sap {
+	padding-left: 120px;
+}
+
+	
+	
+
+
+/*********************/
+/*----DISPOSITIVI----*/
+/*********************/
+.smartphoneTelefoni, .tabletComputer, .modemNetworking, .tvSmartLiving{
+	position:relative;
+	background-color:#75A3FF;
+	width:720px;
+	height:300px;
+	margin-bottom:50px;
+}
+
+.dispositivi img{
+	margin-left:17px;
+	margin-top: -6px;
+}
+
+#tuttiSmartphone, #tuttiTablet, #tuttiModem, #tuttiTVSL{
+	margin-left:25px;
+}
+
+.botDisp a {
+	position:relative;
+	left:6px;
+	top:-45px;
+	float: left;
+	width: 150px;
+	height: 35px;
+	margin-left:17px;
+	padding-top:7px;
+	z-index:2;
+}
+
+.botDisp a:link, .botDisp a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;	
+	border: solid 2px white;
+	text-align: center;
+	display: block;
+}
+
+.botDisp a:hover {
+	background-color: #F5585B;
+}
+
+.dispositivi p{
+	font-size: 24px;
+	color: red;
+	text-align: center;
+	padding-top: 10px;
+}
+
+/*******************/
+/*----CHI SIAMO----*/
+/*******************/
+
+.whoweare {
+	color:white;
+	font-size: 15px;
+	padding-left: 30px;
+}
+
+#wwavideo {
+	padding-left: 130px;
+	width: 456px;
+	height: 272px;
+	margin-top: 20px;
+	
+}
+
+.whoweare h3 {
+	font-size: 18px;
+}
+
+#meeting {
+	padding-left: 130px;
+	width: 479px;
+	height: 184px;
+	margin-top: 20px;
+}
+#meetingtxt {
+	padding-left: 170px;
+}
+
+#valori {
+	padding-top: 10px;
+}
+
+.val1, .val2, .val3, .val4 {
+	margin-top:20px;
+}
+
+#val1img {
+	float: left;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+#val2img{
+	float: right;
+	padding-right: 60px;
+	padding-top: 20px;
+}
+
+
+#val3img {
+	float: left;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+#val4img {
+	float: right;
+	padding-top: 20px;
+	padding-right: 60px;
+}
+
+.whoweare p {
+	padding-top:20px;
+}
+
+/********************/
+/*----TV ENT CAT----*/
+/********************/
+.tvEntCat {
+	color: white;
+	font-size: 16px;
+}
+.tvEntCat h3, #tetext {
+	font-size: 18px;
+}
+
+#tetext {
+	float: left;
+}
+
+
+
+
+
+
+
+
