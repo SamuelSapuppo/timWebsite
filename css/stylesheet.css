@@ -406,8 +406,13 @@ a {
 }
 
 
-#val3img, #val3txt {
-	float: left;
+#val3img{
+	left:100px;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+#val3txt {
+	float: right;
 	padding-top: 20px;
 	padding-right: 20px;
 }
