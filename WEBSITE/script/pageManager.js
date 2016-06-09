@@ -19,8 +19,15 @@ function clickPageLinks() {
             // remove class from the previous active menu element
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
-
-            newElm.addClass('active');
+			newElm.addClass('active');
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf') {
+				var preElm = $('li[class*="subm"]');
+				preElm.removeClass('subm');
+			}
+			
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf')
+				newElm.addClass('subm');
+			
 
             manager(args);
         }
@@ -99,6 +106,20 @@ function manager(args) {
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
 					
+					
+					break;
+				}
+				case "tvent_cat": {
+					clickPageLinks();
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					break;
+				}
+				
+				case "smartphoneTelefoni": {
+					clickPageLinks();
+					$(".submenud").show();
+					$('.smartlife_page').css('margin-top', '-4px');
 					break;
 				}
 			

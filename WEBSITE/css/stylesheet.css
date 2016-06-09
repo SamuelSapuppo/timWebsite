@@ -166,6 +166,9 @@ a {
 	background-color: #99FFFF;
 	color: black;
 }
+.subm{
+	font-weight: bold;
+}
 .notallowed a:hover {
 	cursor:not-allowed;
 }
@@ -440,15 +443,25 @@ a {
 .tvEntCat {
 	color: white;
 	font-size: 16px;
+	margin-top: -10px;
 }
 .tvEntCat h3, #tetext {
 	font-size: 18px;
 }
-
-#tetext {
+#teico {
 	float: left;
+	padding-right: 50px;
+	padding-left: 30px;
 }
 
+#teimg {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.tvser, .musicser, .readingser, .gamingser {
+	margin-bottom:30px;
+}
 
 
 
