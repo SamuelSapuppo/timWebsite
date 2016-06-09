@@ -44,6 +44,7 @@ function restore(){
 	$('.assistance_page').css('margin-top', '4px');
 	$('.promotions_page').css('margin-top', '4px');
 	$('.thegroup_page').css('margin-top', '4px');
+	
 }
 
 
@@ -72,7 +73,7 @@ function manager(args) {
 			switch(page) {
 				case "home": {
 					clickPageLinks();
-					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');
+					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');				
 					break;
 				}
 								
@@ -80,20 +81,14 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');
-			
-					
-
-					
+					$('.smartlife_page').css('margin-top', '-4px');	
 					break;
 				}
 				case "smartlife": {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife" id="navlast">SMART LIFE</a>');
 					$(".submenus").show();
-					$('.assistance_page').css('margin-top', '-4px');
-					
-					
+					$('.assistance_page').css('margin-top', '-4px');				
 					break;
 				}
 				case "assistance": {
@@ -101,8 +96,6 @@ function manager(args) {
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance" id="navlast">ASSISTENZA</a>');
 					$(".submenua").show();
 					$('.promotions_page').css('margin-top', '-4px');
-					
-					
 					break;
 				}
 				case "whoweare": {
@@ -110,8 +103,6 @@ function manager(args) {
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#whoweare" id="navlast">CHI SIAMO</a>');
 					$(".submenuw").show();
 					$('.thegroup_page').css('margin-top', '-4px');
-					
-					
 					break;
 				}
 				case "tvent_cat": {
@@ -135,7 +126,14 @@ function manager(args) {
 					$('.smartlife_page').css('margin-top', '-4px');
 					break;
 				}
-			
+				
+				case "tvSmartLiving": {
+					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
+					$(".submenud").show();
+					$('.smartlife_page').css('margin-top', '-4px');
+					break;
+				}
 				default: clickPageLinks(); break;
 				
             }

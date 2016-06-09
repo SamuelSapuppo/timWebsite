@@ -501,8 +501,19 @@ a {
 
 
 
-
-
-
-
-
+/****************************/
+/*----SmartphoneTelefoni----*/
+/****************************/
+.filtroST, .filtroTSL{
+	background-color: #D4FFFF;
+	height: 196px;
+	width: 718px;
+	padding-top:5px;
+	padding-left:40px;
+	
+}
+.titolo_filtro{
+	margin-left:-20px;
+}
+.filtroST td, .filtroTSL{
+	width:200px;
