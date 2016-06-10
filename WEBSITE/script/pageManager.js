@@ -124,6 +124,11 @@ function manager(args) {
 					$(".submenud").show();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
+					function Check(id){
+					if(document.getElementById)
+						document.getElementById(id).checked=true;
+					}				
+					
 					break;
 				}
 				
@@ -131,7 +136,7 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
 					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');
+					$('.smartlife_page').css('margin-top', '-4px');			
 					break;
 				}
 				default: clickPageLinks(); break;
