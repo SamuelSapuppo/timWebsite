@@ -73,7 +73,7 @@ function manager(args) {
 			switch(page) {
 				case "home": {
 					clickPageLinks();
-					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');				
+					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');
 					break;
 				}
 								
@@ -81,7 +81,52 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');	
+					$('.smartlife_page').css('margin-top', '-4px');
+					document.getElementById("li01").onclick=function(){
+							localStorage.setItem("selection", 1);
+							localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("tuttiSmartphoneBot").onclick=function(){
+							localStorage.setItem("selection", 1);
+							localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("smartphoneBot").onclick=function(){
+						localStorage.setItem("selection", 2);
+						localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("iphoneBot").onclick=function(){
+						localStorage.setItem("selection", 3);
+						localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("altroSmartphoneBot").onclick=function(){
+						localStorage.setItem("selection", 4);
+						localStorage.setItem("useSelection", true);
+					};
+					
+					
+					
+					document.getElementById("li04").onclick=function(){
+							localStorage.setItem("selection", 1);
+							localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("tuttiTVSLBot").onclick=function(){
+							localStorage.setItem("selection", 1);
+							localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("tvBot").onclick=function(){
+						localStorage.setItem("selection", 2);
+						localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("smartwatchBot").onclick=function(){
+						localStorage.setItem("selection", 3);
+						localStorage.setItem("useSelection", true);
+					};
+					document.getElementById("altroTVSLBot").onclick=function(){
+						localStorage.setItem("selection", 4);
+						localStorage.setItem("useSelection", true);
+					};
+					
+					
 					break;
 				}
 				case "smartlife": {
@@ -124,11 +169,30 @@ function manager(args) {
 					$(".submenud").show();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
-					function Check(id){
-					if(document.getElementById)
-						document.getElementById(id).checked=true;
-					}				
 					
+					if(localStorage.getItem("useSelection")=="true"){
+						localStorage.setItem("useSelection", true);
+						switch (localStorage.getItem("selection")){
+							case "1":{
+								document.getElementById("ckST1").checked="true";
+								break;
+							}
+							case "2":{
+								document.getElementById("ckST2").checked="true";
+								break;
+							}
+							case "3":{
+								document.getElementById("ckST3").checked="true";
+								break;
+							}
+							case "4":{
+								document.getElementById("ckST4").checked="true";
+								break;
+							}
+							default: {								
+							}
+						}
+					}									
 					break;
 				}
 				
@@ -136,7 +200,31 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
 					$(".submenud").show();
-					$('.smartlife_page').css('margin-top', '-4px');			
+					$('.smartlife_page').css('margin-top', '-4px');		
+
+					if(localStorage.getItem("useSelection")=="true"){
+						localStorage.setItem("useSelection", true);
+						switch (localStorage.getItem("selection")){
+							case "1":{
+								document.getElementById("ckTSL1").checked="true";
+								break;
+							}
+							case "2":{
+								document.getElementById("ckTSL2").checked="true";
+								break;
+							}
+							case "3":{
+								document.getElementById("ckTSL3").checked="true";
+								break;
+							}
+							case "4":{
+								document.getElementById("ckTSL4").checked="true";
+								break;
+							}
+							default: {								
+							}
+						}
+					}								
 					break;
 				}
 				default: clickPageLinks(); break;
