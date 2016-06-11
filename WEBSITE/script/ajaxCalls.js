@@ -51,3 +51,44 @@ function getTvent(info) {
     });
 
 }
+
+
+function getSmartETel(info) {
+	
+        $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getSmartETel.php", //Relative or absolute path to file.php file
+        data: {id:info},
+        success: function(response) {
+            var json=JSON.parse(response);
+            var content = '';
+			
+				for(var i=0;i<json.length;i++){
+
+                    content+='<div class="box-dispos">';
+                    content+='<div class="desc2"><h3>'+json[i].nome_d+'</h3>';
+                    content+='</div></div>';
+				}
+            // based on id I will fill the related divs
+            switch(info) {
+                case '1':
+                    $(".smarttel").html(content);
+                break;
+            }
+            // based on id I will fill the related divs
+            switch(info) {
+                case '1':
+                    $(".smarttel").html(content);
+                break;
+            }
+
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}

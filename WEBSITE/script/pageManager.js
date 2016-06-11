@@ -175,6 +175,7 @@ function manager(args) {
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckST1").checked="true";
+								getSmartETel('1');
 								break;
 							}
 							case "2":{
