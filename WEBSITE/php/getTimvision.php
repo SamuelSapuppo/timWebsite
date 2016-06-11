@@ -35,12 +35,13 @@ else {
     }
 
     //free result
-    $result->close();
+    //$result->close();
 
     //close connection
     $mysqli->close();
 
 
+}
 
 
 

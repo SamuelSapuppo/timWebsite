@@ -64,7 +64,7 @@ function getTimvision(callback) {
 
             var categorie=JSON.parse(response);
             console.log(categorie);
-            for(var i=0;i<istruttori.length;i++){
+            for(var i=0;i<categorie.length;i++){
 
             $(".timvcat").append(i);
             callback();

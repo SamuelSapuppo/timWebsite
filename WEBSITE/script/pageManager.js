@@ -72,14 +72,15 @@ function manager(args) {
         			
 			switch(page) {
 				case "home": {
+					clickPageLinks();
 					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');
-					getTimvision(function () { clickPageLinks(); });
 					break;
 				}
 				
 				case "timvision": {
-					clickPageLinks();
+					//getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
+					break;
 				}
 								
 				case "devices": {
@@ -172,7 +173,7 @@ function manager(args) {
 				case "smartphoneTelefoni": {
 					clickPageLinks();
 					$(".submenud").show();
-					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
 					
 					if(localStorage.getItem("useSelection")=="true"){
@@ -203,7 +204,7 @@ function manager(args) {
 				
 				case "tvSmartLiving": {
 					clickPageLinks();
-					$(".nav").html('<a href="index.html">HOME> </a> <a href="smartlife.html">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');		
 
