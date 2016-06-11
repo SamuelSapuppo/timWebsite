@@ -84,11 +84,36 @@ function getSmartETel(info) {
                 break;
             }
 
+    }
+	});
+}
+
+
+
+
+
+
+/*function getTimvision(callback) {
+ console.log("I'm ready!");
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getTimvision.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            var categorie=JSON.parse(response);
+            console.log(categorie);
+            for(var i=0;i<istruttori.length;i++){
+
+            $(".timvcat").append(i);
+            callback();
         },
         error: function(request,error)
         {
             console.log("Error");
         }
     });
-
-}
+	
+*/
