@@ -72,9 +72,14 @@ function manager(args) {
         			
 			switch(page) {
 				case "home": {
-					clickPageLinks();
-					$(".nav").html('<a href="index.html" id="navlast">HOME</a>');
+					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');
+					getTimvision(function () { clickPageLinks(); });
 					break;
+				}
+				
+				case "timvision": {
+					clickPageLinks();
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
 				}
 								
 				case "devices": {
