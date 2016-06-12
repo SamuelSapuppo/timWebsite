@@ -1,8 +1,8 @@
 <?php
 /*
  * Tim Website: HYP Project 2015-16
- * getTvent.php
- * Query for Tim Vision contents
+ * getTimvision.php
+ * Query for Tim Vision services 
  * Author: Pennati Giulia
  */
 
@@ -18,8 +18,10 @@ if (mysqli_connect_errno()) { //verify connection
     exit(); //do nothing else
 }
 else {
-    
-    $query = "SELECT Contenuto, Immagine FROM TimVision WHERE Pag=1 AND Id<=8";
+    //echo "Successful connection"; // connection ok
+
+    //# extract results mysqli_result::fetch_array
+    $query = "SELECT Contenuto, Immagine FROM TimVision WHERE IdVis<=8 AND Pag=1";
     //query execution
     $result = $mysqli->query($query);
 
@@ -33,15 +35,22 @@ else {
         }
         echo json_encode($myArray);
     }
+	else {
+		echo "La tabella è vuota!";
+	}
 
     //free result
-    //$result->close();
+    $result->close();
 
     //close connection
     $mysqli->close();
 
 
+
 }
+
+
+
 
 
 

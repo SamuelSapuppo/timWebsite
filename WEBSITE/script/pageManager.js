@@ -78,7 +78,7 @@ function manager(args) {
 				}
 				
 				case "timvision": {
-					//getTimvision(function () { clickPageLinks(); });					
+					getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
 					break;
 				}
