@@ -573,3 +573,47 @@ a {
 #asscat a:hover {
 	background-color: #669EFF;
 }
+/*******************/
+/*----TimVision----*/
+/*******************/
+
+.timvision {
+	color: white;
+	font-size: 18px;
+}
+
+#logotv {
+	width: 382px;
+	height: auto;
+}
+
+#categoria {
+	float: left;
+}
+
+#catimg {
+	width: 154px;
+	height: auto;
+}
+
+#dispset {
+	border-radius: 10px 10px 10px 10px;
+	border-color: white;
+}
+
+#attiva a{
+	color: black;
+}
+
+#attiva a:link, #attiva a:visited {
+	width: 234px;
+	height: 40px;
+	padding: 7px 20px 7px 20px;
+	background-color: #99FFFF;
+	border: solid 2px #3366FF;
+}
+
+#attiva a:hover {
+	background-color:#3366FF;
+	color: white;
+}

@@ -21,7 +21,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     //# extract results mysqli_result::fetch_array
-    $query = "SELECT Contenuto, Immagine FROM TimVision WHERE IdVis<=8 AND Pag=1";
+    $query = "SELECT Contenuto, Immagine FROM TimVision WHERE Pag=1";
     //query execution
     $result = $mysqli->query($query);
 

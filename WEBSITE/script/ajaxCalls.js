@@ -95,15 +95,20 @@ function getTimvision(callback){
             var cat=JSON.parse(response);
             console.log(cat);
             var content = '';
+			var devices = '';
+			var i=0;
 			
-			for(var i=0;i<cat.length;i++){
+			for(i;i<cat.length-1;i++){
 
 				content+=cat[i].Contenuto;
 				content+=cat[i].Immagine;
 				
 				
 			}
+			devices+=cat[i++].Immagine;
+			
 			$(".timvcat").html(content);
+			$("#dispset").append(devices);
 			
         },
         error: function(request,error)
