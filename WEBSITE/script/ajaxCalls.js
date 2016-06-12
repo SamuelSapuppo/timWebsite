@@ -64,24 +64,30 @@ function getSmartETel(info) {
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
-			
 				for(var i=0;i<json.length;i++){
-
                     content+='<div class="box-dispos">';
-                    content+='<div class="desc2"><h3>'+json[i].nome_d+'</h3>';
-                    content+='</div></div>';
+                    content+='<div class="titDisp"><h3>'+json[i].nome_d+'</h3>';
+					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_d+'</p>';
+					content+='<p>Memoria:<br>'+json[i].memoria_d+'</p>';
+					content+='<p>Display:<br>'+json[i].display_d+'</p>';
+                    content+='</div></div></div>';
 				}
+				
             // based on id I will fill the related divs
             switch(info) {
                 case '1':
                     $(".smarttel").html(content);
                 break;
             }
-           
+        }, error: function(request,error){
+            console.log("Error");
+        }
+    });
 
-    }
-	});
 }
+
+
+
 
 function getTimvision(callback){
     console.log("I'm ready!");

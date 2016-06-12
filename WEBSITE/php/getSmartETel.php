@@ -27,7 +27,7 @@ else {
     switch($type) {
 
         case '1':
-            $query = "SELECT nome_d, memoria_d, display_d FROM smartETel";
+            $query = "SELECT nome_d, prz_scn_d, memoria_d, display_d FROM smartETel";
         break;
        }
 
