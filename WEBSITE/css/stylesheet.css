@@ -643,3 +643,64 @@ a {
 	padding-right: 30px;
 	padding-left: 250px;
 }
+
+/****************************/
+/*----ActRules_TimVision----*/
+/****************************/
+.actrules {
+	color: white;
+	font-size: 18px;
+}
+.actrules a {
+	color: white;
+	font-size: 15px;
+}
+
+#costiset {
+	border-radius: 10px 10px 10px 10px;
+	border-color: white;
+	background-color: #FF8175;
+	
+}
+
+#costoind, #costoindf {
+	background-color: #F50733;
+	border: solid 1px black;
+	float: left;
+	text-align: center;
+	padding-top: 7px;
+	width: 175px;
+	height: 36px;
+}
+
+#costoindf {
+	margin-left: 13px;
+}
+
+#back {
+	font-size: 14px;
+}
+
+#costiset legend {
+	font-size: 14px;
+}
+
+#clickactive a:link, #clickactive a:visited{
+	width: 223px;
+	height: 36px;
+	background-color: #F50733;
+	border: solid 1px black;
+	padding: 7px 15px 7px 15px;
+	
+}
+#clickactive a:hover {
+	background-color: #FF8175;
+}
+
+#qui {
+	text-decoration: underline;
+}
+
+.ita {
+	font-style: italic;
+}

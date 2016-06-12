@@ -25,9 +25,9 @@ function clickPageLinks() {
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
 			}
-			if(document.getElementById("land")) {
+			else 
 				restore();
-			}
+			
             manager(args);
         }
 		
