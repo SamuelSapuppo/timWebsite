@@ -504,20 +504,36 @@ a {
 /****************************/
 /*----SmartphoneTelefoni----*/
 /****************************/
+#titSmartETel{
+	margin-top:10px;
+	color:white;
+	text-align:center;
+	font-size:25px;
+}
+
 .filtroST, .filtroTSL{
 	background-color: #D4FFFF;
 	height: 196px;
-	width: 718px;
+	width: 680px;
 	padding-top:5px;
-	padding-left:40px;
-	
+	padding-left:35px;
+	padding-right:4px;
+	margin-top:7px;
+	margin-left:-10px;
 }
+
 .titolo_filtro{
 	margin-left:-20px;
 }
+	
 .filtroST td, .filtroTSL{
 	width:200px;
 }
+
+.smarttel{
+	margin-top:90px;
+}
+
 .box-dispos{
 	background-color:#3366FF;
 	width:350px;
@@ -525,6 +541,15 @@ a {
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
+	margin-top: 20px;
+	margin-right:23px;
+	margin-left:-10px;
+	float:left;
+	color:white;
+}
+
+.img-dispos{
+	float:left;
 }
 
 /********************/
