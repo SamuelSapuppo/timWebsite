@@ -20,13 +20,14 @@ function clickPageLinks() {
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
 			newElm.addClass('active');
-			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf') {
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving' || page=='supportoConf') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
 			}
-			else 
+			if(document.getElementById("land")) {
 				restore();
+			}
             manager(args);
         }
 		
@@ -35,6 +36,9 @@ function clickPageLinks() {
     };
 }
 
+function subRestore() {
+	$('li[class*="subm"]').removeClass("subm");
+}
 function restore(){
 	$(".submenus").hide();
 	$(".submenud").hide();
@@ -44,6 +48,7 @@ function restore(){
 	$('.assistance_page').css('margin-top', '4px');
 	$('.promotions_page').css('margin-top', '4px');
 	$('.thegroup_page').css('margin-top', '4px');
+
 	
 }
 
@@ -72,7 +77,8 @@ function manager(args) {
         			
 			switch(page) {
 				case "home": {
-					clickPageLinks();
+					subRestore();
+					clickPageLinks();					
 					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');
 					break;
 				}
@@ -80,10 +86,14 @@ function manager(args) {
 				case "timvision": {
 					getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					$('.tvent_cat_page').addClass('subm');
 					break;
 				}
 								
 				case "devices": {
+					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").show();
@@ -136,6 +146,7 @@ function manager(args) {
 					break;
 				}
 				case "smartlife": {
+					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife" id="navlast">SMART LIFE</a>');
 					$(".submenus").show();
@@ -143,6 +154,7 @@ function manager(args) {
 					break;
 				}
 				case "assistance": {
+					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance" id="navlast">ASSISTENZA</a>');
 					$(".submenua").show();
@@ -150,6 +162,7 @@ function manager(args) {
 					break;
 				}
 				case "whoweare": {
+					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#whoweare" id="navlast">CHI SIAMO</a>');
 					$(".submenuw").show();

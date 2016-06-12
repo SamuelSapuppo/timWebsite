@@ -582,23 +582,41 @@ a {
 	font-size: 18px;
 }
 
+.timvision h3 {
+	font-size: 18px;
+}
+
 #logotv {
 	width: 382px;
 	height: auto;
 }
 
-#categoria {
+#categoria p{
 	float: left;
+	line-height: 1;
 }
 
-#catimg {
+#catimg, #catimg2 {
 	width: 154px;
 	height: auto;
+	padding-left: 30px;
+}
+
+#tit {
+	padding-top: 20px;
+}
+
+#catimg2 {
+	padding-left: 45px;
 }
 
 #dispset {
 	border-radius: 10px 10px 10px 10px;
 	border-color: white;
+}
+
+#dispset a {
+	color: white;
 }
 
 #attiva a{
@@ -616,4 +634,12 @@ a {
 #attiva a:hover {
 	background-color:#3366FF;
 	color: white;
+}
+
+
+
+#dispvis1 {
+	float: left;
+	padding-right: 30px;
+	padding-left: 250px;
 }
