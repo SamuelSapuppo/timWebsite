@@ -89,28 +89,38 @@ function getSmartETel(info) {
 
 
 
-
-/*function getTimvision(callback) {
- console.log("I'm ready!");
+function getTimvision(callback){
+    console.log("I'm ready!");
 
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getTimvision.php", //Relative or absolute path to file.php file
         success: function(response) {
 
-            var categorie=JSON.parse(response);
-            console.log(categorie);
-            for(var i=0;i<categorie.length;i++){
+            var cat=JSON.parse(response);
+            console.log(cat);
+            var content = '';
+			var devices = '';
+			var i=0;
+			
+			for(i;i<cat.length-1;i++){
 
-            $(".timvcat").append(i);
-            callback();
+				content+=cat[i].Contenuto;
+				content+=cat[i].Immagine;
+				
+				
+			}
+			devices+=cat[i++].Immagine;
+			
+			$(".timvcat").html(content);
+			$("#dispset").append(devices);
+			
         },
         error: function(request,error)
         {
             console.log("Error");
         }
     });
-	
-*/
+
+}
