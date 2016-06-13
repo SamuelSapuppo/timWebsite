@@ -69,6 +69,8 @@ function getSmartETel(info) {
                     content+='<img class="img-dispos" src="'+json[i].img_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
 					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_d+' €</p>';
+					content+='<p>Memoria:<br>'+json[i].memoria_d+'</p>';
+					content+='<p>Display:<br>'+json[i].display_d+'"</p>';
                     content+='</div></div>';
 				}
 				
@@ -104,15 +106,13 @@ function getTVESL(info) {
                     content+='<img class="img-dispos" src="'+json[i].img_tvSL+'">';
                     content+='<p class="titDisp">'+json[i].nome_tvSL+'</p>';
 					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_tvSL+' €</p>';
-					content+='<p>Memoria:<br>'+json[i].memoria_tvSL+'</p>';
-					content+='<p>Display:<br>'+json[i].display_tvSL+'"</p>';
                     content+='</div></div>';
 				}
 				
             // based on id I will fill the related divs
             switch(info) {
                 case '1':
-                    $(".tvsl").html(content);
+                    $(".tvsl1").html(content);
                 break;
             }
         }, error: function(request,error){
