@@ -226,14 +226,17 @@ function manager(args) {
 							}
 							case "2":{
 								document.getElementById("ckST2").checked="true";
+								getSmartETel('2');
 								break;
 							}
 							case "3":{
 								document.getElementById("ckST3").checked="true";
+								getSmartETel('3');
 								break;
 							}
 							case "4":{
 								document.getElementById("ckST4").checked="true";
+								getSmartETel('4');
 								break;
 							}
 							default: {								
@@ -254,18 +257,22 @@ function manager(args) {
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckTSL1").checked="true";
+								getTVESL('1');
 								break;
 							}
 							case "2":{
 								document.getElementById("ckTSL2").checked="true";
+								getTVESL('2');
 								break;
 							}
 							case "3":{
 								document.getElementById("ckTSL3").checked="true";
+								getTVESL('3');
 								break;
 							}
 							case "4":{
 								document.getElementById("ckTSL4").checked="true";
+								getTVESL('4');
 								break;
 							}
 							default: {								
@@ -280,7 +287,7 @@ function manager(args) {
             //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
             // scroll to top when loading a new page
-            window.scrollTo(0,0);
+            window.scrollTo(0,200);
         });
    
 
