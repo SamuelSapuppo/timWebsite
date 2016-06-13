@@ -52,6 +52,16 @@ function restore(){
 	
 }
 
+function onKeyNumeric(e) {
+	
+	// Accetto solo numeri e backspace <-
+	if (e.keyCode >= 0 && e.keyCode <= 1000000000) 
+		return true;
+	 else 
+		return false;
+	
+}
+
 
 
 function manager(args) {
@@ -86,6 +96,23 @@ function manager(args) {
 				case "timvision": {
 					getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					$('.tvent_cat_page').addClass('subm');
+					break;
+				}
+				case "actrules_timvision": {
+					getActrules(function () {clickPageLinks();});
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a href="#timvision">Tim vision> </a> <a id="navlast" href="#actrules_timvision">Regolamento</a>');
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					$('.tvent_cat_page').addClass('subm');
+					break;
+				}
+				
+				case "formreg_timvision": {
+					getCosti(function () {clickPageLinks();});
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a href="#timvision">Tim vision> </a> <a href="#actrules_timvision">Regolamento> </a> <a id="navlast" href="#formreg_timvision">Sottoscrivi</a>');
 					$(".submenus").show();	
 					$('.assistance_page').css('margin-top', '-4px');
 					$('.tvent_cat_page').addClass('subm');
