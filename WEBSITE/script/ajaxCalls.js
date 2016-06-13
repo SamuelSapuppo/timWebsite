@@ -66,11 +66,12 @@ function getSmartETel(info) {
             var content = '';
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos">';
-                    content+='<div class="titDisp"><h3>'+json[i].nome_d+'</h3>';
-					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_d+'</p>';
+                    content+='<img class="img-dispos" src="'+json[i].img_d+'">'
+                    content+='<p class="titDisp">'+json[i].nome_d+'</p>';
+					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_d+' €</p>';
 					content+='<p>Memoria:<br>'+json[i].memoria_d+'</p>';
-					content+='<p>Display:<br>'+json[i].display_d+'</p>';
-                    content+='</div></div></div>';
+					content+='<p>Display:<br>'+json[i].display_d+'"</p>';
+                    content+='</div></div>';
 				}
 				
             // based on id I will fill the related divs
