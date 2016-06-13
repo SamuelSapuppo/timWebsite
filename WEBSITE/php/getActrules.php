@@ -21,7 +21,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     //# extract results mysqli_result::fetch_array
-    $query = "SELECT Contenuto, Immagine FROM TimVision";
+    $query = "SELECT Cont1, Cont2, Cont3, Cont4 FROM Actrules_timvision";
     //query execution
     $result = $mysqli->query($query);
 

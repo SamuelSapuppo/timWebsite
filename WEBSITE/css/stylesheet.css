@@ -674,7 +674,7 @@ a {
 /****************************/
 .actrules {
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
 }
 .actrules a {
 	color: white;
@@ -686,6 +686,43 @@ a {
 	border-color: white;
 	background-color: #FF8175;
 	
+}
+
+#costiset p {
+	color: black;
+	font-size: 13px;
+
+}
+
+#p1, #p2, #p3, #p5, #p6, #p7 {
+	float:left;
+}
+
+#p1, #p5 {
+	padding-left: 20px;
+}
+#p2 {
+	padding-left: 40px;
+}
+#p6 {
+	padding-left: 85px;
+}
+#p3 {
+	padding-left: 150px;
+}
+#p7 {
+	padding-left: 120px;
+}
+#p4 {
+	padding-left: 200px;
+}
+#p8 {
+	padding-left: 80px;
+}
+
+#p4, #p8 {
+	float: left;
+
 }
 
 #costoind, #costoindf {
@@ -704,6 +741,7 @@ a {
 
 #back {
 	font-size: 14px;
+	font-style: underline;
 }
 
 #costiset legend {
@@ -729,3 +767,72 @@ a {
 .ita {
 	font-style: italic;
 }
+
+/***************************/
+/*----FormReg_TimVision----*/
+/***************************/
+
+.formreg {
+	color: white;
+	font-size: 16px;
+}
+.formreg a {
+	color: white;
+}
+
+.formreg p {
+	line-height: 1;
+}
+
+.formreg > .logovis, .actrules > .logovis  {
+	float: left;
+	
+}
+#voice {
+	margin-left: 10px;
+	margin-right: 20px;
+	width: 200px;
+}
+
+#voice1 {
+	margin-left: 30px;
+	margin-right: 20px;
+	width: 200px;
+}
+
+#voice2 {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 200px;
+}
+
+#voice3 {
+	margin-left: 10px;
+	margin-right: 20px;
+	width: 30px;
+}
+
+.conferma a:link, .conferma a:visited {
+	padding: 7px 50px 7px 50px;
+	background-color: #F50733;
+	border: solid 1px black;
+	width: 223px;
+	height: 36px;
+}
+
+.conferma a:hover {
+	background-color: #F5585B;
+}
+
+#dati {
+	font-style: italic;
+}
+
+#rad1 {
+	margin-left: 50px;
+}
+
+#rad2 {
+	margin-left: 365px;
+}
+
