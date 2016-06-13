@@ -1,8 +1,8 @@
 <?php
 /*
  * Tim Website: HYP Project 2015-16
- * getSmartETel.php
- * Query for Smartphone & Telefoni
+ * getTVESL.php
+ * Query for TV & Smart Living
  * Author: Sapuppo Samuel
  */
 
@@ -27,21 +27,10 @@ else {
     switch($type) {
 
         case '1':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel";
+		$query = "SELECT categoria_tvSL, img_tvSL, nome_tvSL, prz_scn_tvSL FROM tvESL";
         break;
 		}
-		case '2':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"Smartphone\"";
-        break;
-		}
-		case '3':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"iPhone\"";
-        break;
-		}
-		case '4':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"Altro\"";
-        break;
-		}
+		
        }
 
 
