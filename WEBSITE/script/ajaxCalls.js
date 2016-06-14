@@ -248,3 +248,36 @@ function getCosti(callback){
     });
 
 }
+
+function getSupporto(callback){
+    console.log("I'm ready!");
+
+    $.ajax({
+        method: "POST",
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getSupporto.php", //Relative or absolute path to file.php file
+        success: function(response) {
+			var cat=JSON.parse(response);
+            console.log(cat);
+            var content = '';
+			var i=1;
+			var cla='';
+			for(i;i<=cat.length;i++){ //vedere perchè non va;
+
+				content+=cat[i].Contenuto;
+				cla='".set'+i+'"';
+				console.log(cla);
+				
+								
+			}
+			$(cla).append(content);
+			
+						
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}

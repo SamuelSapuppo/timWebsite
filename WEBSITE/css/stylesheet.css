@@ -836,3 +836,46 @@ a {
 	margin-left: 365px;
 }
 
+/**************************/
+/*----Supporto tecnico----*/
+/**************************/
+
+.supportoconf {
+	font-size: 16px;
+	color: white;
+}
+.supportoconf fieldset {
+	width: 315px;
+	border-radius: 10px 10px 10px 10px;
+	border-color: white;
+	margin-bottom: 20px;
+	margin-right: 50px;
+}
+
+.supportoconf legend {
+	font-weight: bold;
+}
+.supportoconf h5 {
+	font-style: italic;
+}
+.sxsc {
+	float: left;
+}
+
+.supportoconf a.expand {
+    font-size: 10px;
+    font-weight: bold;
+    color: #4e4e4e;
+    background: #ccf5ff;
+    border: 1px solid #3366FF;
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin-top: 5px;
+    display: inline-block;
+    min-width: 80px;
+}
+
+.supportoconf a.expand::before {
+    display: inline-block;
+    content: attr(data-close);
+}
