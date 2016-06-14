@@ -112,7 +112,7 @@ function getTVESL(info) {
             // based on id I will fill the related divs
             switch(info) {
                 case '1':
-                    $(".tvsl1").html(content);
+                    $(".tvsl").html(content);
                 break;
             }
         }, error: function(request,error){
