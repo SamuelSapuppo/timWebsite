@@ -22,24 +22,24 @@ else {
 
 
     if(isset($_POST['id'])) $type = $_POST['id'];
-    else $type = '1'; //debug
+    else $type = "1"; //debug
 
     switch($type) {
 
-        case '1':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel";
+        case "1":{
+		$query = "SELECT * FROM smartETel";
         break;
 		}
-		case '2':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"Smartphone\"";
+		case "2":{
+		$query = "SELECT * FROM smartETel WHERE categoria_d LIKE 'Smartphone'";
         break;
 		}
-		case '3':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"iPhone\"";
+		case "3":{
+		$query = "SELECT * FROM smartETel WHERE categoria_d LIKE 'iPhone'";
         break;
 		}
-		case '4':{
-		$query = "SELECT categoria_d, img_d, nome_d, prz_scn_d, memoria_d, display_d FROM smartETel WHERE categoria_d LIKE \"Altro\"";
+		case "4":{
+		$query = "SELECT * FROM smartETel WHERE categoria_d LIKE 'Altro'";
         break;
 		}
        }

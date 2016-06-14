@@ -501,10 +501,10 @@ a {
 
 
 
-/****************************/
-/*----SmartphoneTelefoni----*/
-/****************************/
-#titSmartETel{
+/**************************************************/
+/*----Smartphone Telefoni   -   TV SmartLiving----*/
+/**************************************************/
+.titPageDevices{
 	margin-top:10px;
 	color:white;
 	text-align:center;
@@ -525,12 +525,26 @@ a {
 .titolo_filtro{
 	margin-left:-20px;
 }
+
+.titDisp{
+	font-size:22px;
+	text-align:center;
+}
+.titTVESL{
+	font-size:18px;
+	text-align:center;
+	line-height: 0.2;
+}
 	
-.filtroST td, .filtroTSL{
+.filtroST td, .filtroTSL td{
 	width:200px;
 }
 
 .smarttel{
+	margin-top:90px;
+}
+
+.tvsl{
 	margin-top:90px;
 }
 
@@ -549,7 +563,88 @@ a {
 }
 
 .img-dispos{
+	margin-left:30px;
+	margin-top:20px;
+	width:100px;
+	height:200px;
 	float:left;
+}
+
+.img-TVESL{
+	margin-left:6px;
+	margin-top:50px;
+	width:165px;
+	height:165px;
+	float:left;
+}
+.TVESLcateg{
+	margin-top:25px;
+}
+.infoDisp{
+	margin-left:200px;	
+}
+
+.infoDisp p{
+	line-height: 0.3;
+}
+
+.infoTVESL{	
+	margin-left:180px;	
+}
+
+.infoTVESL p{
+	line-height: 0.2;
+}
+
+.nomecateg{
+	font-size:15px;
+}
+
+.valcateg{
+	margin-left:20px;
+	font-size:15px;
+}
+
+.botST, .botTVESL{
+	font-size:14px;
+}
+
+.botST a{
+	position:relative;
+	float: left;
+	width: 120px;
+	height: 30px;
+	padding-top:7px;
+	left:-20px;
+}
+.botTVESL a {
+	position:relative;
+	float: left;
+	width: 120px;
+	height: 30px;
+	padding-top:7px;
+	margin-top:10px;
+	left:17px;
+}
+
+.botST a:link, .botST a:visited, .botTVESL a:link, .botTVESL a:visited  {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;	
+	border: solid 2px white;
+	text-align: center;
+	display: block;
+}
+
+.botST a:hover {
+	background-color: #F5585B;
+}
+
+#idBot_tvSL3{
+	padding-top:27px;
+}
+#idBot_tvSL4{
+	padding-top:10px;
 }
 
 /********************/

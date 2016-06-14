@@ -22,16 +22,27 @@ else {
 
 
     if(isset($_POST['id'])) $type = $_POST['id'];
-    else $type = '1'; //debug
+    else $type = "1"; //debug
 
     switch($type) {
 
-        case '1':{
-		$query = "SELECT categoria_tvSL, img_tvSL, nome_tvSL, prz_scn_tvSL FROM tvESL";
+        case "1":{
+		$query = "SELECT * FROM tvESL";
         break;
 		}
-		
-       }
+		case "2":{
+		$query = "SELECT * FROM tvESL WHERE categoria_tvSL LIKE 'Smart-TV'";
+        break;
+		}
+		case "3":{
+		$query = "SELECT * FROM tvESL WHERE categoria_tvSL LIKE 'Smartwatch'";
+        break;
+		}
+		case "4":{
+		$query = "SELECT * FROM tvESL WHERE categoria_tvSL LIKE 'Altro'";
+        break;
+		}
+    }
 
 
     //query execution

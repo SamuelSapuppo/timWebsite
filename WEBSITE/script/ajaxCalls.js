@@ -64,22 +64,26 @@ function getSmartETel(info) {
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
+				
 				for(var i=0;i<json.length;i++){
-                    content+='<div class="box-dispos">';
-                    content+='<img class="img-dispos" src="'+json[i].img_d+'">';
-                    content+='<p class="titDisp">'+json[i].nome_d+'</p>';
-					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_d+' €</p>';
-					content+='<p>Memoria:<br>'+json[i].memoria_d+'</p>';
-					content+='<p>Display:<br>'+json[i].display_d+'"</p>';
-                    content+='</div></div>';
+                    content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
+                    content+='<p class="titDisp">'     +json[i].nome_d+'</p>';
+					content+='<div class="infoDisp">';
+					content+='<p class="nomecateg">Prezzo:</p>';
+					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';
+					content+='<p class="nomecateg">Memoria:</p>';
+					content+='<p class="valcateg">'+json[i].memoria_d+'</p>';
+					content+='<p class="nomecateg">Display:</p>';
+					content+='<p class="valcateg">'+json[i].display_d+'"</p>';
+					content+='<div class="botST">';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+                    content+='</div></div></div>';
 				}
 				
             // based on id I will fill the related divs
-            switch(info) {
-                case '1':
                     $(".smarttel").html(content);
-                break;
-            }
+					
+				
         }, error: function(request,error){
             console.log("Error");
         }
@@ -102,19 +106,48 @@ function getTVESL(info) {
             var json=JSON.parse(response);
             var content = '';
 				for(var i=0;i<json.length;i++){
-                    content+='<div class="box-dispos">';
-                    content+='<img class="img-dispos" src="'+json[i].img_tvSL+'">';
-                    content+='<p class="titDisp">'+json[i].nome_tvSL+'</p>';
-					content+='<div class="infoDisp"><p>Prezzo:<br>'+json[i].prz_scn_tvSL+' €</p>';
-                    content+='</div></div>';
+					
+					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img_tvSL+'">';
+					content+='<div class="titTVESL">';
+                    content+='<p>'+json[i].marca_tvSL+'</p>';
+                    content+='<p>'+json[i].nome_tvSL+'</p>';
+                    content+='</div>';					
+					content+='<div class="infoTVESL">';
+					content+='<p class="nomecateg">Prezzo:</p>';
+					content+='<p class="valcateg">'+json[i].prz_scn_tvSL+' €</p>';	
+					
+					if(json[i].dimens_tvSL!='NULL'){
+						content+='<div class="TVESLcateg">';
+						content+='<p class="nomecateg">Dimensione:</p>';
+						content+='<p class="valcateg">'+json[i].dimens_tvSL+'</p>';
+						content+='</div>';
+					}
+					if(json[i].memoria_tvSL!='NULL'){
+						content+='<div class="TVESLcateg">';
+						content+='<p class="nomecateg">Memoria:</p>';
+						content+='<p class="valcateg">'+json[i].memoria_tvSL+'</p>';
+						content+='</div>';
+					}
+					if(json[i].display_tvSL!='NULL'){
+						content+='<div class="TVESLcateg">';
+						content+='<p class="nomecateg">Display:</p>';
+						content+='<p class="valcateg">'+json[i].display_tvSL+'</p>';
+						content+='</div>';
+					}
+					if(json[i].caratt_tvSL!='NULL'){
+						content+='<div class="TVESLcateg">';
+						content+='<p class="nomecateg">Caratteristiche:</p>';
+						content+='<p class="valcateg">'+json[i].caratt_tvSL+'</p>';
+						content+='</div>';
+					}
+					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_tvSL+'>';
+					content+='<span class='+json[i].classBot_tvSL+'><a href='+json[i].hrefBot_tvSL+'>SCOPRI</a></span>';
+					content+='</div></div></div>';
 				}
 				
             // based on id I will fill the related divs
-            switch(info) {
-                case '1':
                     $(".tvsl").html(content);
-                break;
-            }
+					
         }, error: function(request,error){
             console.log("Error");
         }
