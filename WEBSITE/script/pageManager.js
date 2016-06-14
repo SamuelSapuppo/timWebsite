@@ -281,6 +281,13 @@ function manager(args) {
 					}								
 					break;
 				}
+				case "supportoConf": {
+					getSupporto(function () {clickPageLinks();});
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a> <a id="navlast" href="#supportoConf">Supporto Tecnico e configurazione </a> ');
+					$(".submenua").show();	
+					$('.promotions_page').css('margin-top', '-4px');
+					break;
+				}
 				default: clickPageLinks(); break;
 				
             }

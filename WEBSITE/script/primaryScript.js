@@ -1,4 +1,5 @@
- $(function primary() {
+
+$(function primary() {
 
     // load the header
     $(".header").load( "header.html");
@@ -23,3 +24,4 @@
 
              
 });
+
