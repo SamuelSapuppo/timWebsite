@@ -56,6 +56,11 @@ else {
         }
         echo json_encode($myArray);
     }
+	
+	
+	
+	//SCRIVO QUI ELSE
+	
 
     //free result
     $result->close();
