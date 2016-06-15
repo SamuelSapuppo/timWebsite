@@ -242,6 +242,24 @@ function manager(args) {
 							default: {								
 							}
 						}
+						
+						document.getElementById("ckST1").onclick=function(){
+							document.getElementById("ckST1").checked="true";
+							getSmartETel('1');							
+						};
+						document.getElementById("ckST2").onclick=function(){
+							document.getElementById("ckST2").checked="true";
+							getSmartETel('2');							
+						};
+						document.getElementById("ckST3").onclick=function(){
+							document.getElementById("ckST3").checked="true";
+							getSmartETel('3');							
+						};
+						document.getElementById("ckST4").onclick=function(){
+							document.getElementById("ckST4").checked="true";
+							getSmartETel('4');							
+						};			
+						
 					}									
 					break;
 				}

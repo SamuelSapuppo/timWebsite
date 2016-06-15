@@ -60,11 +60,11 @@ function getSmartETel(info) {
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getSmartETel.php", //Relative or absolute path to file.php file
-        data: {id:info},
+		data: {id:info},
         success: function(response) {
+			console.log((response));
             var json=JSON.parse(response);
             var content = '';
-				
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
                     content+='<p class="titDisp">'     +json[i].nome_d+'</p>';
@@ -79,8 +79,8 @@ function getSmartETel(info) {
 					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
-				
             // based on id I will fill the related divs
+			
                     $(".smarttel").html(content);
 					
 				
