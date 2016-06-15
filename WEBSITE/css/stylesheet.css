@@ -960,7 +960,7 @@ a {
 .supportoconf a.expand {
     font-size: 10px;
     font-weight: bold;
-    color: #4e4e4e;
+    color: black;
     background: #ccf5ff;
     border: 1px solid #3366FF;
     border-radius: 3px;
@@ -973,4 +973,12 @@ a {
 .supportoconf a.expand::before {
     display: inline-block;
     content: attr(data-close);
+}
+
+.unseen {
+	display: none;
+}
+.supportoconf a {
+	color: white;
+	font-size: 13px;
 }
