@@ -356,19 +356,17 @@ function getSupporto(callback){
 			var cat=JSON.parse(response);
             console.log(cat);
             var content = '';
-			var i=1;
+			var i=0;
 			var cla='';
 			for(i;i<=cat.length;i++){ //vedere perchè non va;
 
-				content+=cat[i].Contenuto;
-				cla='".set'+i+'"';
+				content=cat[i].Contenuto;
+				console.log(content);
+				cla=('.set'+(i+1));
 				console.log(cla);
-				
-								
+				$(cla).append(content);							
 			}
-			$(cla).append(content);
-			
-						
+								
         },
         error: function(request,error)
         {
