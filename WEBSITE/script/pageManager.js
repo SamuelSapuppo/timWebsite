@@ -62,8 +62,6 @@ function onKeyNumeric(e) {
 	
 }
 
-
-
 function manager(args) {
 
     // get the page (0 in the array of args)
@@ -169,7 +167,6 @@ function manager(args) {
 						localStorage.setItem("useSelection", true);
 					};
 					
-					
 					break;
 				}
 				case "smartlife": {
@@ -212,6 +209,8 @@ function manager(args) {
 				
 				case "smartphoneTelefoni": {
 					clickPageLinks();
+					
+					var content = ''
 					$(".submenud").show();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
@@ -221,22 +220,22 @@ function manager(args) {
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckST1").checked="true";
-								getSmartETel('1');
+								getSmartETel('1');	
 								break;
 							}
 							case "2":{
 								document.getElementById("ckST2").checked="true";
-								getSmartETel('2');
+								getSmartETel('2');	
 								break;
 							}
 							case "3":{
 								document.getElementById("ckST3").checked="true";
-								getSmartETel('3');
+								getSmartETel('3');	
 								break;
 							}
 							case "4":{
 								document.getElementById("ckST4").checked="true";
-								getSmartETel('4');
+								getSmartETel('4');	
 								break;
 							}
 							default: {								
@@ -245,7 +244,7 @@ function manager(args) {
 						
 						document.getElementById("ckST1").onclick=function(){
 							document.getElementById("ckST1").checked="true";
-							getSmartETel('1');							
+							getSmartETel('1');		
 						};
 						document.getElementById("ckST2").onclick=function(){
 							document.getElementById("ckST2").checked="true";
@@ -258,7 +257,13 @@ function manager(args) {
 						document.getElementById("ckST4").onclick=function(){
 							document.getElementById("ckST4").checked="true";
 							getSmartETel('4');							
-						};			
+						};		
+						
+						
+						
+			//sbiribillanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee		
+						
+						
 						
 					}									
 					break;
@@ -275,30 +280,192 @@ function manager(args) {
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckTSL1").checked="true";
-								getTVESL('1');
+								getTVESL('5');
 								break;
 							}
 							case "2":{
 								document.getElementById("ckTSL2").checked="true";
-								getTVESL('2');
+								getTVESL('6');
 								break;
 							}
 							case "3":{
 								document.getElementById("ckTSL3").checked="true";
-								getTVESL('3');
+								getTVESL('7');
 								break;
 							}
 							case "4":{
 								document.getElementById("ckTSL4").checked="true";
-								getTVESL('4');
+								getTVESL('8');
 								break;
 							}
 							default: {								
 							}
 						}
+						
+						document.getElementById("ckTSL1").onclick=function(){
+							document.getElementById("ckTSL1").checked="true";
+							getTVESL('5');						
+						};
+						document.getElementById("ckTSL2").onclick=function(){
+							document.getElementById("ckTSL2").checked="true";
+							getTVESL('6');							
+						};
+						document.getElementById("ckTSL3").onclick=function(){
+							document.getElementById("ckTSL3").checked="true";
+							getTVESL('7');						
+						};
+						document.getElementById("ckTSL4").onclick=function(){
+							document.getElementById("ckTSL4").checked="true";
+							getTVESL('8');							
+						};	
+											
+
+											
+											
+
+
+						document.getElementById("ckTSL1").onclick=function(){
+							document.getElementById("ckTSL1").checked="true";
+							getTVESL('5');						
+						};
+						document.getElementById("ckTSL2").onclick=function(){
+							document.getElementById("ckTSL2").checked="true";
+							getTVESL('6');							
+						};
+						document.getElementById("ckTSL3").onclick=function(){
+							document.getElementById("ckTSL3").checked="true";
+							getTVESL('7');						
+						};
+						document.getElementById("ckTSL4").onclick=function(){
+							document.getElementById("ckTSL4").checked="true";
+							getTVESL('8');							
+						};	
+							
+
+
+				if document.getElementsByClassName("checkPrzST").onclick=function{
+
+
+
+
+
+
+
+						checkedElem = new Array();
+				if document.getElementById("ckST5")=="TRUE"{
+					checkedElem[0]="1";
+				}
+				else{
+					checkedElem[0]="0";
+				}
+				if document.getElementById("ckST6")=="TRUE"{
+					checkedElem[1]="1";
+				}
+				else{
+					checkedElem[1]="0";
+				}
+				if document.getElementById("ckST7")=="TRUE"{
+					checkedElem[2]="1";
+				}
+				else{
+					checkedElem[2]="0";
+				}
+				if document.getElementById("ckST8")=="TRUE"{
+					checkedElem[3]="1";
+				}
+				else{
+					checkedElem[3]="0";
+				}
+				if document.getElementById("ckST9")=="TRUE"{
+					checkedElem[4]="1";
+				}
+				else{
+					checkedElem[4]="0";
+				}
+				if document.getElementById("ckST10")=="TRUE"{
+					checkedElem[5]="1";
+				}
+				else{
+					checkedElem[5]="0";
+				}
+				if document.getElementById("ckST11")=="TRUE"{
+					checkedElem[6]="1";
+				}
+				else{
+					checkedElem[6]="0";
+				}
+				if document.getElementById("ckST12")=="TRUE"{
+					checkedElem[7]="1";
+				}
+				else{
+					checkedElem[7]="0";
+				}
+				if document.getElementById("ckST13")=="TRUE"{
+					checkedElem[8]="1";
+				}
+				else{
+					checkedElem[8]="0";
+				}
+				if document.getElementById("ckST14")=="TRUE"{
+					checkedElem[9]="1";
+				}
+				else{
+					checkedElem[9]="0";
+				}
+				if document.getElementById("ckST15")=="TRUE"{
+					checkedElem[10]="1";
+				}
+				else{
+					checkedElem[10]="0";
+				}
+				if document.getElementById("ckST16")=="TRUE"{
+					checkedElem[11]="1";
+				}
+				else{
+					checkedElem[11]="0";
+				}
+				if document.getElementById("ckST17")=="TRUE"{
+					checkedElem[12]="1";
+				}
+				else{
+					checkedElem[12]="0";
+				}
+				if document.getElementById("ckST18")=="TRUE"{
+					checkedElem[13]="1";
+				}
+				else{
+					checkedElem[13]="0";
+				}
+
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
 					}								
 					break;
 				}
+				
+				
+				
+				case "device": {
+					clickPageLinks();
+					getDevice('2');	
+					break;
+				}
+				
+				
+				
 				case "supportoConf": {
 					getSupporto(function () {clickPageLinks();});
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a> <a id="navlast" href="#supportoConf">Supporto Tecnico e configurazione </a> ');
@@ -306,6 +473,9 @@ function manager(args) {
 					$('.promotions_page').css('margin-top', '-4px');
 					break;
 				}
+				
+				
+				
 				default: clickPageLinks(); break;
 				
             }

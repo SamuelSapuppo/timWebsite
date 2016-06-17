@@ -20,14 +20,18 @@ if (mysqli_connect_errno()) { //verify connection
 		
 else {
 
-
+	$prezzo=NULL;
     if(isset($_POST['id'])) $type = $_POST['id'];
     else $type = "1"; //debug
+	
+	
+    if(isset($_POST['cont'])) $cont = $_POST['cont'];
+    else $cont = ""; //debug
 
     switch($type) {
 
         case "1":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST'";
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' $cont";
         break;
 		}
 		case "2":{

@@ -22,43 +22,10 @@ else {
 
 
     if(isset($_POST['id'])) $type = $_POST['id'];
-    else $type = "1"; //debug
+    else $type = "1"; //debug	
+    $query = "SELECT * FROM dispos WHERE id_d=$type";
+ 
 
-    switch($type) {
-
-        case "1":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST'";
-        break;
-		}
-		case "2":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartphone'";
-        break;
-		}
-		case "3":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'iPhone'";
-        break;
-		}
-		case "4":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' AND categoria_d LIKE 'Altro'";
-        break;
-		}
-		case "5":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL'";
-        break;
-		}
-		case "6":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smart-TV'";
-        break;
-		}
-		case "7":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartwatch'";
-        break;
-		}
-		case "8":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL' AND categoria_d LIKE 'Altro'";
-        break;
-		}
-       }
 
 
     //query execution
