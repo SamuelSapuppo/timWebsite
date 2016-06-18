@@ -27,11 +27,10 @@ else {
 	
     if(isset($_POST['cont'])) $cont = $_POST['cont'];
     else $cont = ""; //debug
-
+    
     switch($type) {
-
         case "1":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' "$cont;
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' $cont";
         break;
 		}
 		case "2":{
@@ -47,19 +46,19 @@ else {
         break;
 		}
 		case "5":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL'";
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL' $cont";
         break;
 		}
 		case "6":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smart-TV'";
+		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smart-TV' $cont";
         break;
 		}
 		case "7":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartwatch'";
+		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartwatch' $cont";
         break;
 		}
 		case "8":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL' AND categoria_d LIKE 'Altro'";
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'TSL' AND categoria_d LIKE 'Altro' $cont";
         break;
 		}
        }

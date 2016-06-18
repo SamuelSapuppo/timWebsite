@@ -62,13 +62,13 @@ function onKeyNumeric(e) {
 	
 }
 
-function funzioneFiltro(){
-	var checkedElem='AND ';
+function funzioneFiltroST(){
+	var checkedElem='AND (';
 	var i=0;
 	var len=0;
 						
 						if (document.getElementById("ckST5").checked==true){
-							checkedElem+='prz_scn_d <= 100 OR ';
+							checkedElem+='prz_scn_d < 100 OR ';
 							i++;
 						};
 						if (document.getElementById("ckST6").checked==true){
@@ -76,7 +76,7 @@ function funzioneFiltro(){
 							i++;
 						};
 						if (document.getElementById("ckST7").checked==true){
-							checkedElem+='prz_scn_d >= 400 OR ';
+							checkedElem+='prz_scn_d > 400 OR ';
 							i++;
 						};
 						
@@ -84,7 +84,7 @@ function funzioneFiltro(){
 							len = checkedElem.length;
 							checkedElem=checkedElem.substr(0,len-3);
 							i=0;
-							checkedElem+='AND ';							
+							checkedElem+=') AND (';		
 						};
 						
 						
@@ -109,7 +109,8 @@ function funzioneFiltro(){
 							len = checkedElem.length;
 							checkedElem=checkedElem.substr(0,len-3);
 							i=0;
-							checkedElem+='AND ';							
+							checkedElem+=') AND (';	
+							
 						};
 						
 						if (document.getElementById("ckST12").checked==true){
@@ -133,11 +134,12 @@ function funzioneFiltro(){
 							len = checkedElem.length;
 							checkedElem=checkedElem.substr(0,len-3);
 							i=0;
-							checkedElem+='AND ';							
+							checkedElem+=') AND (';	
+							
 						};
 						
 						if (document.getElementById("ckST16").checked==true){
-							checkedElem+='display_d <= 3 OR ';
+							checkedElem+='display_d < 3 OR ';
 							i++;
 						};
 						if (document.getElementById("ckST17").checked==true){
@@ -145,20 +147,74 @@ function funzioneFiltro(){
 							i++;
 						};
 						if (document.getElementById("ckST18").checked==true){
-							checkedElem+='display_d >= 5 OR ';
+							checkedElem+='display_d > 5 OR ';
 							i++;
 						};
 						
 						if(i>0){
 							len = checkedElem.length;
 							checkedElem=checkedElem.substr(0,len-3);
-							checkedElem+='AND ';							
+							checkedElem+=') AND (';							
+						};
+						len = checkedElem.length;
+						checkedElem=checkedElem.substr(0,len-5);
+						
+						var id=localStorage.getItem("selection");
+						getSmartETel(id, checkedElem);	
+						
+}
+
+function funzioneFiltroTSL(){
+	var checkedElem='AND (';
+	var i=0;
+	var len=0;
+						
+						if (document.getElementById("ckTSL5").checked==true){
+							checkedElem+='prz_scn_d < 100 OR ';
+							i++;
+						};
+						if (document.getElementById("ckTSL6").checked==true){
+							checkedElem+='prz_scn_d BETWEEN 100 AND 300 OR ';
+							i++;
+						};
+						if (document.getElementById("ckTSL7").checked==true){
+							checkedElem+='prz_scn_d BETWEEN 300 AND 400 OR ';
+							i++;
+						};						
+						if (document.getElementById("ckTSL8").checked==true){
+							checkedElem+='prz_scn_d > 400 OR ';
+							i++;
 						};
 						
-						checkedElem=checkedElem.substr(0,len-4);
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							i=0;
+							checkedElem+=') AND (';		
+						};
 						
-						console.log(checkedElem);
-						getSmartETel(localStorage.getItem("selection"), checkedElem);	
+						
+						if (document.getElementById("ckTSL9").checked==true){
+							checkedElem+='marca_d LIKE "D-link" OR ';
+							i++;
+						};
+						if (document.getElementById("ckTSL10").checked==true){
+							checkedElem+='marca_d LIKE "Samsung" OR ';
+							i++;
+						};
+						
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							i=0;
+							checkedElem+=') AND (';	
+							
+						};
+						len = checkedElem.length;
+						checkedElem=checkedElem.substr(0,len-5);
+						
+						var id=localStorage.getItem("selection");
+						getTVESL(id, checkedElem);	
 						
 }
 
@@ -342,20 +398,20 @@ function manager(args) {
 						}
 						
 						document.getElementById("ckST1").onclick=function(){
-							document.getElementById("ckST1").checked="true";
-							getSmartETel('1','');							
+							localStorage.setItem("selection", 1);
+							funzioneFiltroST();		
 						};
 						document.getElementById("ckST2").onclick=function(){
-							document.getElementById("ckST2").checked="true";
-							getSmartETel('2','');							
+							localStorage.setItem("selection", 2);
+							funzioneFiltroST();								
 						};
 						document.getElementById("ckST3").onclick=function(){
-							document.getElementById("ckST3").checked="true";
-							getSmartETel('3','');							
+							localStorage.setItem("selection", 3);
+							funzioneFiltroST();									
 						};
 						document.getElementById("ckST4").onclick=function(){
-							document.getElementById("ckST4").checked="true";
-							getSmartETel('4','');							
+							localStorage.setItem("selection", 4);
+							funzioneFiltroST();								
 						};					
 						
 					}									
@@ -373,22 +429,22 @@ function manager(args) {
 						switch (localStorage.getItem("selection")){
 							case "5":{
 								document.getElementById("ckTSL1").checked="true";
-								getTVESL('5');
+								getTVESL('5','');
 								break;
 							}
 							case "6":{
 								document.getElementById("ckTSL2").checked="true";
-								getTVESL('6');
+								getTVESL('6','');
 								break;
 							}
 							case "7":{
 								document.getElementById("ckTSL3").checked="true";
-								getTVESL('7');
+								getTVESL('7','');
 								break;
 							}
 							case "8":{
 								document.getElementById("ckTSL4").checked="true";
-								getTVESL('8');
+								getTVESL('8','');
 								break;
 							}
 							default: {								
@@ -396,24 +452,20 @@ function manager(args) {
 						}
 						
 						document.getElementById("ckTSL1").onclick=function(){
-							document.getElementById("ckTSL1").checked="true";
 							localStorage.setItem("selection", 5);
-							getTVESL('5');						
+							funzioneFiltroTSL();							
 						};
 						document.getElementById("ckTSL2").onclick=function(){
-							document.getElementById("ckTSL2").checked="true";
 							localStorage.setItem("selection", 6);
-							getTVESL('6');							
+							funzioneFiltroTSL();								
 						};
 						document.getElementById("ckTSL3").onclick=function(){
-							document.getElementById("ckTSL3").checked="true";
 							localStorage.setItem("selection", 7);
-							getTVESL('7');						
+							funzioneFiltroTSL();							
 						};
 						document.getElementById("ckTSL4").onclick=function(){
-							document.getElementById("ckTSL4").checked="true";
 							localStorage.setItem("selection", 8);
-							getTVESL('8');							
+							funzioneFiltroTSL();							
 						};	
 													
 			}								

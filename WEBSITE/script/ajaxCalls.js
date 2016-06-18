@@ -64,7 +64,6 @@ function getSmartETel(info, cont) {
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
-			console.log(cont);
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
@@ -97,14 +96,14 @@ function getSmartETel(info, cont) {
 
 
 
-function getTVESL(info) {
+function getTVESL(info, cont){
 	
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getDevices.php", //Relative or absolute path to file.php file
-        data: {id:info},
+        data: {id:info, cont:cont},
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
