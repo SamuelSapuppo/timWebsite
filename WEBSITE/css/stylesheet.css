@@ -219,6 +219,7 @@ a {
 	height: 100%;
 	margin-bottom: 150px;
 	margin-top:10px;
+	min-height: 400px;
 }
 
 
@@ -1082,6 +1083,8 @@ a {
 }
 .supportoconf h5 {
 	font-style: italic;
+	margin: 7px 2px 7px 2px;
+	font-size: 14px;
 }
 .sxsc {
 	float: left;
@@ -1111,4 +1114,23 @@ a {
 .supportoconf a {
 	color: white;
 	font-size: 13px;
+}
+.supportoconf p {
+	line-height: 1;
+	margin: 5px;
+	text-decoration: underline;
+}
+
+.expand {
+	width: 100px;
+	height: 30px;
+}
+
+/***************************/
+/*----Pagina assistenza----*/
+/***************************/
+
+.asspage {
+	font-size: 17px;
+	color: white;
 }
