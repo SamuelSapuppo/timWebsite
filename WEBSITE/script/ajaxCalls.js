@@ -75,7 +75,12 @@ function getSmartETel(info, cont) {
 					content+='<p class="nomecateg">Prezzo:</p>';
 					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';
 					content+='<p class="nomecateg">Memoria:</p>';
-					content+='<p class="valcateg">'+json[i].memoria_d+'</p>';
+					if(json[i].memoria2_d!=''){
+						content+='<p class="valcateg">'+json[i].memoria1_d+' / '+json[i].memoria2_d+'</p>';
+					}
+					else{
+						content+='<p class="valcateg">'+json[i].memoria1_d+'</p>';
+					}
 					content+='<p class="nomecateg">Display:</p>';
 					content+='<p class="valcateg">'+json[i].display_d+'"</p>';
 					content+='<div class="botST">';
@@ -135,7 +140,12 @@ function getTVESL(info, cont){
 					if(json[i].memoria_d!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Memoria:</p>';
-						content+='<p class="valcateg">'+json[i].memoria_d+'</p>';
+						if(json[i].memoria2_d!=''){
+							content+='<p class="valcateg">'+json[i].memoria1_d+' / '+json[i].memoria2_d+'</p>';
+						}
+						else{
+							content+='<p class="valcateg">'+json[i].memoria1_d+'</p>';
+						}
 						content+='</div>';
 					}
 					if(json[i].display_tvSL!=''){

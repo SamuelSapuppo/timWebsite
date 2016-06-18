@@ -114,19 +114,19 @@ function funzioneFiltroST(){
 						};
 						
 						if (document.getElementById("ckST12").checked==true){
-							checkedElem+='memoria_d LIKE "8 Gb" OR ';
+							checkedElem+='memoria1_d LIKE "8 Gb" OR memoria2_d LIKE "8 Gb" OR ';
 							i++;
 						};
 						if (document.getElementById("ckST13").checked==true){
-							checkedElem+='memoria_d LIKE "16 Gb" OR ';
+							checkedElem+='memoria1_d LIKE "16 Gb" OR memoria2_d LIKE "16 Gb" OR ';
 							i++;
 						};
 						if (document.getElementById("ckST14").checked==true){
-							checkedElem+='memoria_d LIKE "32 Gb" OR ';
+							checkedElem+='memoria1_d LIKE "32 Gb" OR memoria2_d LIKE "32 Gb" OR ';
 							i++;
 						};
 						if (document.getElementById("ckST15").checked==true){
-							checkedElem+='memoria_d LIKE "64 Gb" OR ';
+							checkedElem+='memoria1_d LIKE "64 Gb" OR memoria2_d LIKE "64 Gb" OR ';
 							i++;
 						};
 						
