@@ -64,6 +64,10 @@ function getSmartETel(info, cont) {
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
+			
+				if(json.length==0){
+					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
+				}
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
@@ -107,6 +111,10 @@ function getTVESL(info, cont){
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
+			
+				if(json.length==0){
+					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
+				}
 				for(var i=0;i<json.length;i++){
 					
 					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img_d+'">';
