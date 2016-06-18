@@ -48,7 +48,7 @@ else {
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
-    if($result->num_rows >0)
+    if($result->num_rows >=0)
     {
         $myArray = array();//create an array
         while($row = $result->fetch_array(MYSQL_ASSOC)) {

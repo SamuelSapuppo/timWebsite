@@ -6,7 +6,7 @@
  */
 
 function getTvent(info) {
-
+		
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
@@ -53,21 +53,21 @@ function getTvent(info) {
 }
 
 
-function getSmartETel(info) {
+function getSmartETel(info, cont) {
 	
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://sitotim.altervista.org/php/getSmartETel.php", //Relative or absolute path to file.php file
-		data: {id:info},
+        url: "http://sitotim.altervista.org/php/getDevices.php", //Relative or absolute path to file.php file
+		data: {id:info, cont:cont},
         success: function(response) {
-			console.log((response));
             var json=JSON.parse(response);
             var content = '';
+			console.log(cont);
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
-                    content+='<p class="titDisp">'     +json[i].nome_d+'</p>';
+                    content+='<p class="titDisp">'+json[i].nome_d+'</p>';
 					content+='<div class="infoDisp">';
 					content+='<p class="nomecateg">Prezzo:</p>';
 					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';
@@ -79,6 +79,9 @@ function getSmartETel(info) {
 					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
+				
+				
+				
             // based on id I will fill the related divs
 			
                     $(".smarttel").html(content);
@@ -100,48 +103,48 @@ function getTVESL(info) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://sitotim.altervista.org/php/getTVESL.php", //Relative or absolute path to file.php file
+        url: "http://sitotim.altervista.org/php/getDevices.php", //Relative or absolute path to file.php file
         data: {id:info},
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
 				for(var i=0;i<json.length;i++){
 					
-					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img_tvSL+'">';
+					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img_d+'">';
 					content+='<div class="titTVESL">';
-                    content+='<p>'+json[i].marca_tvSL+'</p>';
-                    content+='<p>'+json[i].nome_tvSL+'</p>';
+                    content+='<p>'+json[i].marca_d+'</p>';
+                    content+='<p>'+json[i].nome_d+'</p>';
                     content+='</div>';					
 					content+='<div class="infoTVESL">';
 					content+='<p class="nomecateg">Prezzo:</p>';
-					content+='<p class="valcateg">'+json[i].prz_scn_tvSL+' €</p>';	
+					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';	
 					
-					if(json[i].dimens_tvSL!='NULL'){
+					if(json[i].dimens_tvSL!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Dimensione:</p>';
 						content+='<p class="valcateg">'+json[i].dimens_tvSL+'</p>';
 						content+='</div>';
 					}
-					if(json[i].memoria_tvSL!='NULL'){
+					if(json[i].memoria_d!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Memoria:</p>';
-						content+='<p class="valcateg">'+json[i].memoria_tvSL+'</p>';
+						content+='<p class="valcateg">'+json[i].memoria_d+'</p>';
 						content+='</div>';
 					}
-					if(json[i].display_tvSL!='NULL'){
+					if(json[i].display_tvSL!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Display:</p>';
 						content+='<p class="valcateg">'+json[i].display_tvSL+'</p>';
 						content+='</div>';
 					}
-					if(json[i].caratt_tvSL!='NULL'){
+					if(json[i].caratt_tvSL!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Caratteristiche:</p>';
 						content+='<p class="valcateg">'+json[i].caratt_tvSL+'</p>';
 						content+='</div>';
 					}
-					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_tvSL+'>';
-					content+='<span class='+json[i].classBot_tvSL+'><a href='+json[i].hrefBot_tvSL+'>SCOPRI</a></span>';
+					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_d+'>';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
 					content+='</div></div></div>';
 				}
 				
@@ -155,7 +158,36 @@ function getTVESL(info) {
 
 }
 
+function getDevice(info) {
+	
+        $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getDevice.php", //Relative or absolute path to file.php file
+        data: {id:info},
+        success: function(response) {
+            var json=JSON.parse(response);
+			var content1='<iframe id="videoD" src='+json[0].video_d+' frameborder="0" allowfullscreen></iframe>';
+			var content2='<img src="'+json[0].img_d+'">';
+			var content3=json[0].prz_int_d+' €';
+			var content4=json[0].prz_scn_d+' €';
+            
+			// based on id I will fill the related divs
+					$(".titDispos").html(json[0].nome_d);
+                    $(".videoDispos").html(content1);
+                    $(".imgDispos").html(content2);
+                    $(".prezzoTotDispos").html(content3);
+                    $(".prezzoScnDispos").html(content4);
+                    $(".carousel-color").css("background-color", json[0].colore_d);
+                    $(".titDescrDispos").html(json[0].titDescr_d);
+                    $(".descrDispos").html(json[0].descr_d);
+        }, error: function(request,error){
+            console.log("Error");
+        }
+    });
 
+}
 
 
 function getTimvision(callback){
