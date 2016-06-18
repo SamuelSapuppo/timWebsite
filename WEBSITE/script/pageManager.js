@@ -62,6 +62,106 @@ function onKeyNumeric(e) {
 	
 }
 
+function funzioneFiltro(){
+	var checkedElem='AND ';
+	var i=0;
+	var len=0;
+						
+						if (document.getElementById("ckST5").checked==true){
+							checkedElem+='prz_scn_d <= 100 OR ';
+							i++;
+						};
+						if (document.getElementById("ckST6").checked==true){
+							checkedElem+='prz_scn_d BETWEEN 100 AND 400 OR ';
+							i++;
+						};
+						if (document.getElementById("ckST7").checked==true){
+							checkedElem+='prz_scn_d >= 400 OR ';
+							i++;
+						};
+						
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							i=0;
+							checkedElem+='AND ';							
+						};
+						
+						
+						if (document.getElementById("ckST8").checked==true){
+							checkedElem+='marca_d LIKE "Apple" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST9").checked==true){
+							checkedElem+='marca_d LIKE "BlackBerry" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST10").checked==true){
+							checkedElem+='marca_d LIKE "Huawei" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST11").checked==true){
+							checkedElem+='marca_d LIKE "Nokia" OR ';
+							i++;
+						};
+						
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							i=0;
+							checkedElem+='AND ';							
+						};
+						
+						if (document.getElementById("ckST12").checked==true){
+							checkedElem+='memoria_d LIKE "8 Gb" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST13").checked==true){
+							checkedElem+='memoria_d LIKE "16 Gb" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST14").checked==true){
+							checkedElem+='memoria_d LIKE "32 Gb" OR ';
+							i++;
+						};
+						if (document.getElementById("ckST15").checked==true){
+							checkedElem+='memoria_d LIKE "64 Gb" OR ';
+							i++;
+						};
+						
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							i=0;
+							checkedElem+='AND ';							
+						};
+						
+						if (document.getElementById("ckST16").checked==true){
+							checkedElem+='display_d <= 3 OR ';
+							i++;
+						};
+						if (document.getElementById("ckST17").checked==true){
+							checkedElem+='display_d BETWEEN 3 AND 5 OR ';
+							i++;
+						};
+						if (document.getElementById("ckST18").checked==true){
+							checkedElem+='display_d >= 5 OR ';
+							i++;
+						};
+						
+						if(i>0){
+							len = checkedElem.length;
+							checkedElem=checkedElem.substr(0,len-3);
+							checkedElem+='AND ';							
+						};
+						
+						checkedElem=checkedElem.substr(0,len-4);
+						
+						console.log(checkedElem);
+						getSmartETel(localStorage.getItem("selection"), checkedElem);	
+						
+}
+
 function manager(args) {
 
     // get the page (0 in the array of args)
@@ -147,23 +247,23 @@ function manager(args) {
 					
 					
 					document.getElementById("li04").onclick=function(){
-							localStorage.setItem("selection", 1);
+							localStorage.setItem("selection", 5);
 							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("tuttiTVSLBot").onclick=function(){
-							localStorage.setItem("selection", 1);
+							localStorage.setItem("selection", 5);
 							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("tvBot").onclick=function(){
-						localStorage.setItem("selection", 2);
+						localStorage.setItem("selection", 6);
 						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("smartwatchBot").onclick=function(){
-						localStorage.setItem("selection", 3);
+						localStorage.setItem("selection", 7);
 						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("altroTVSLBot").onclick=function(){
-						localStorage.setItem("selection", 4);
+						localStorage.setItem("selection", 8);
 						localStorage.setItem("useSelection", true);
 					};
 					
@@ -209,33 +309,32 @@ function manager(args) {
 				
 				case "smartphoneTelefoni": {
 					clickPageLinks();
-					
-					var content = ''
 					$(".submenud").show();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
+					var checkedElem = '';
 					
 					if(localStorage.getItem("useSelection")=="true"){
 						localStorage.setItem("useSelection", true);
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckST1").checked="true";
-								getSmartETel('1');	
+								getSmartETel('1','');
 								break;
 							}
 							case "2":{
 								document.getElementById("ckST2").checked="true";
-								getSmartETel('2');	
+								getSmartETel('2','');
 								break;
 							}
 							case "3":{
 								document.getElementById("ckST3").checked="true";
-								getSmartETel('3');	
+								getSmartETel('3','');
 								break;
 							}
 							case "4":{
 								document.getElementById("ckST4").checked="true";
-								getSmartETel('4');	
+								getSmartETel('4','');
 								break;
 							}
 							default: {								
@@ -244,29 +343,23 @@ function manager(args) {
 						
 						document.getElementById("ckST1").onclick=function(){
 							document.getElementById("ckST1").checked="true";
-							getSmartETel('1');		
+							getSmartETel('1','');							
 						};
 						document.getElementById("ckST2").onclick=function(){
 							document.getElementById("ckST2").checked="true";
-							getSmartETel('2');							
+							getSmartETel('2','');							
 						};
 						document.getElementById("ckST3").onclick=function(){
 							document.getElementById("ckST3").checked="true";
-							getSmartETel('3');							
+							getSmartETel('3','');							
 						};
 						document.getElementById("ckST4").onclick=function(){
 							document.getElementById("ckST4").checked="true";
-							getSmartETel('4');							
-						};		
-						
-						
-						
-			//sbiribillanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee		
-						
-						
+							getSmartETel('4','');							
+						};					
 						
 					}									
-					break;
+					break;					
 				}
 				
 				case "tvSmartLiving": {
@@ -278,22 +371,22 @@ function manager(args) {
 					if(localStorage.getItem("useSelection")=="true"){
 						localStorage.setItem("useSelection", true);
 						switch (localStorage.getItem("selection")){
-							case "1":{
+							case "5":{
 								document.getElementById("ckTSL1").checked="true";
 								getTVESL('5');
 								break;
 							}
-							case "2":{
+							case "6":{
 								document.getElementById("ckTSL2").checked="true";
 								getTVESL('6');
 								break;
 							}
-							case "3":{
+							case "7":{
 								document.getElementById("ckTSL3").checked="true";
 								getTVESL('7');
 								break;
 							}
-							case "4":{
+							case "8":{
 								document.getElementById("ckTSL4").checked="true";
 								getTVESL('8');
 								break;
@@ -304,157 +397,28 @@ function manager(args) {
 						
 						document.getElementById("ckTSL1").onclick=function(){
 							document.getElementById("ckTSL1").checked="true";
+							localStorage.setItem("selection", 5);
 							getTVESL('5');						
 						};
 						document.getElementById("ckTSL2").onclick=function(){
 							document.getElementById("ckTSL2").checked="true";
+							localStorage.setItem("selection", 6);
 							getTVESL('6');							
 						};
 						document.getElementById("ckTSL3").onclick=function(){
 							document.getElementById("ckTSL3").checked="true";
+							localStorage.setItem("selection", 7);
 							getTVESL('7');						
 						};
 						document.getElementById("ckTSL4").onclick=function(){
 							document.getElementById("ckTSL4").checked="true";
+							localStorage.setItem("selection", 8);
 							getTVESL('8');							
 						};	
-											
-
-											
-											
-
-
-						document.getElementById("ckTSL1").onclick=function(){
-							document.getElementById("ckTSL1").checked="true";
-							getTVESL('5');						
-						};
-						document.getElementById("ckTSL2").onclick=function(){
-							document.getElementById("ckTSL2").checked="true";
-							getTVESL('6');							
-						};
-						document.getElementById("ckTSL3").onclick=function(){
-							document.getElementById("ckTSL3").checked="true";
-							getTVESL('7');						
-						};
-						document.getElementById("ckTSL4").onclick=function(){
-							document.getElementById("ckTSL4").checked="true";
-							getTVESL('8');							
-						};	
-							
-
-
-				if document.getElementsByClassName("checkPrzST").onclick=function{
-
-
-
-
-
-
-
-						checkedElem = new Array();
-				if document.getElementById("ckST5")=="TRUE"{
-					checkedElem[0]="1";
-				}
-				else{
-					checkedElem[0]="0";
-				}
-				if document.getElementById("ckST6")=="TRUE"{
-					checkedElem[1]="1";
-				}
-				else{
-					checkedElem[1]="0";
-				}
-				if document.getElementById("ckST7")=="TRUE"{
-					checkedElem[2]="1";
-				}
-				else{
-					checkedElem[2]="0";
-				}
-				if document.getElementById("ckST8")=="TRUE"{
-					checkedElem[3]="1";
-				}
-				else{
-					checkedElem[3]="0";
-				}
-				if document.getElementById("ckST9")=="TRUE"{
-					checkedElem[4]="1";
-				}
-				else{
-					checkedElem[4]="0";
-				}
-				if document.getElementById("ckST10")=="TRUE"{
-					checkedElem[5]="1";
-				}
-				else{
-					checkedElem[5]="0";
-				}
-				if document.getElementById("ckST11")=="TRUE"{
-					checkedElem[6]="1";
-				}
-				else{
-					checkedElem[6]="0";
-				}
-				if document.getElementById("ckST12")=="TRUE"{
-					checkedElem[7]="1";
-				}
-				else{
-					checkedElem[7]="0";
-				}
-				if document.getElementById("ckST13")=="TRUE"{
-					checkedElem[8]="1";
-				}
-				else{
-					checkedElem[8]="0";
-				}
-				if document.getElementById("ckST14")=="TRUE"{
-					checkedElem[9]="1";
-				}
-				else{
-					checkedElem[9]="0";
-				}
-				if document.getElementById("ckST15")=="TRUE"{
-					checkedElem[10]="1";
-				}
-				else{
-					checkedElem[10]="0";
-				}
-				if document.getElementById("ckST16")=="TRUE"{
-					checkedElem[11]="1";
-				}
-				else{
-					checkedElem[11]="0";
-				}
-				if document.getElementById("ckST17")=="TRUE"{
-					checkedElem[12]="1";
-				}
-				else{
-					checkedElem[12]="0";
-				}
-				if document.getElementById("ckST18")=="TRUE"{
-					checkedElem[13]="1";
-				}
-				else{
-					checkedElem[13]="0";
-				}
-
-			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-							
-					}								
-					break;
-				}
+													
+			}								
+			break;
+		}
 				
 				
 				

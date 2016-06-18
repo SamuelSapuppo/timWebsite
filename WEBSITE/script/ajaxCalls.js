@@ -64,6 +64,7 @@ function getSmartETel(info, cont) {
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
+			console.log(cont);
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
@@ -187,38 +188,6 @@ function getDevice(info) {
     });
 
 }
-
-function getDevice1(info) {
-	
-        $.ajax({
-        method: "POST",
-        //dataType: "json", //type of data
-        crossDomain: true, //localhost purposes
-        url: "http://sitotim.altervista.org/php/getDevice.php", //Relative or absolute path to file.php file
-        data: {id:info},
-        success: function(response) {
-            var json=JSON.parse(response);
-				
-            // based on id I will fill the related divs
-                    $(".titDispos").html(json[0].nome_d);
-                    $(".videoDispos").html(json[0].video_d);
-                    $("#imgDispos").html(json[0].img_d);
-                    $(".prezzoTotDispos").html(json[0].prz_int_d);
-                    $(".prezzoScnDispos").html(json[0].prz_scn_d);
-                    $(".coloreDispos").html(json[0].colore_d);
-                    $(".schTecDispos").html(json[0].desc_d);
-					
-					
-        }, error: function(request,error){
-            console.log("Error");
-        }
-    });
-
-}
-
-
-
-
 
 
 function getTimvision(callback){

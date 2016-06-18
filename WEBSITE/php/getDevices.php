@@ -2,7 +2,7 @@
 /*
  * Tim Website: HYP Project 2015-16
  * getDevices.php
- * Query for Smartphone & Telefoni
+ * Query for Devices
  * Author: Sapuppo Samuel
  */
 
@@ -31,19 +31,19 @@ else {
     switch($type) {
 
         case "1":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' $cont";
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' "$cont;
         break;
 		}
 		case "2":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartphone'";
+		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'Smartphone' $cont";
         break;
 		}
 		case "3":{
-		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'iPhone'";
+		$query = "SELECT * FROM dispos WHERE categoria_d LIKE 'iPhone' $cont";
         break;
 		}
 		case "4":{
-		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' AND categoria_d LIKE 'Altro'";
+		$query = "SELECT * FROM dispos WHERE tipo_d LIKE 'ST' AND categoria_d LIKE 'Altro' $cont";
         break;
 		}
 		case "5":{
