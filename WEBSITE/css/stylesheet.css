@@ -219,6 +219,7 @@ a {
 	height: 100%;
 	margin-bottom: 150px;
 	margin-top:10px;
+	min-height: 400px;
 }
 
 
@@ -1116,11 +1117,20 @@ a {
 }
 .supportoconf p {
 	line-height: 1;
-	margin: 2px;
+	margin: 5px;
 	text-decoration: underline;
 }
 
 .expand {
 	width: 100px;
 	height: 30px;
+}
+
+/***************************/
+/*----Pagina assistenza----*/
+/***************************/
+
+.asspage {
+	font-size: 17px;
+	color: white;
 }
