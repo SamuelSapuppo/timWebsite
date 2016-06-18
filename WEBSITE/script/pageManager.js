@@ -319,3 +319,14 @@ function manager(args) {
  });
    
 }
+$(document).ready(function() {
+	$(".expand").click(function() {
+		$(this).closest('.subsection').find('.unseen').slideToggle();
+		
+	});
+	
+});
+
+
+
+

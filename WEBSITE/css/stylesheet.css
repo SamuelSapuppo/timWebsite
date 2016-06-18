@@ -952,6 +952,8 @@ a {
 }
 .supportoconf h5 {
 	font-style: italic;
+	margin: 7px 2px 7px 2px;
+	font-size: 14px;
 }
 .sxsc {
 	float: left;
@@ -981,4 +983,14 @@ a {
 .supportoconf a {
 	color: white;
 	font-size: 13px;
+}
+.supportoconf p {
+	line-height: 1;
+	margin: 2px;
+	text-decoration: underline;
+}
+
+.expand {
+	width: 100px;
+	height: 30px;
 }

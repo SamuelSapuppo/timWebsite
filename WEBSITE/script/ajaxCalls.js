@@ -295,7 +295,7 @@ function getSupporto(callback){
             var content = '';
 			var i=0;
 			var cla='';
-			for(i;i<=cat.length;i++){ //vedere perchè non va;
+			for(i;i<cat.length;i++){ //vedere perchè non va;
 
 				content=cat[i].Contenuto;
 				console.log(content);
