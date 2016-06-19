@@ -1,7 +1,7 @@
 <?php
 /*
  * Tim Website: HYP Project 2015-16
- * getSupporto.php
+ * getConfiphone.php
  * Query for Tim Vision services 
  * Author: Pennati Giulia
  */
@@ -21,7 +21,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     //# extract results mysqli_result::fetch_array
-    $query = "SELECT Contenuto FROM SupConf";
+    $query = "SELECT Contenuto FROM ConfMail";
     //query execution
     $result = $mysqli->query($query);
 

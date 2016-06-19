@@ -226,7 +226,7 @@ function manager(args) {
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
     // different values of special
-    //var special = parts[1];
+
 
     // enable script for calls to external php
     $.getScript('script/ajaxCalls.js', function(){
@@ -490,6 +490,13 @@ function manager(args) {
 					break;
 				}
 				
+				case "asspage": {
+					getConfiphone(function() {clickPageLings();});
+					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a> <a href="#supportoConf">Supporto Tecnico e configurazione> </a> <a id="navlast" href="#asspage">Configurazione mail i-Phone</a>');
+					$(".submenua").show();	
+					$('.promotions_page').css('margin-top', '-4px')
+				}
+				
 				
 				
 				default: clickPageLinks(); break;
@@ -505,13 +512,6 @@ function manager(args) {
  });
    
 }
-$(document).ready(function() {
-	$(".expand").click(function() {
-		$(this).closest('.subsection').find('.unseen').slideToggle();
-		
-	});
-	
-});
 
 
 

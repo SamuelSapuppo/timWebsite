@@ -361,3 +361,37 @@ function getSupporto(callback){
     });
 
 }
+
+function getConfiphone(callback){
+    console.log("I'm ready!");
+
+    $.ajax({
+        method: "POST",
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getConfiphone.php", //Relative or absolute path to file.php file
+        success: function(response) {
+			var cat=JSON.parse(response);
+            console.log(cat);
+            var content = '';
+			var i=0;
+			var faq='';
+			var disp='';
+			for(i;i<cat.length-2;i++){ //vedere perchè non va;
+
+				content+=cat[i].Contenuto;
+										
+			}
+			$("#asspagecontent").html(content);
+			faq=cat[i++].Contenuto;
+			$("#asspagefaq").html(faq);
+			disp=cat[i++].Contenuto;
+			$("#assdisp").append(disp);
+								
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
