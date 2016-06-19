@@ -20,7 +20,7 @@ function clickPageLinks() {
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
 			newElm.addClass('active');
-			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving' || page=='supportoConf'|| page=='promotions') {
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
@@ -533,6 +533,7 @@ function manager(args) {
 				
 				
 				case "promotions": {
+					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#promotions">PROMOZIONI> </a>');
 					getPromotions();
