@@ -25,10 +25,10 @@ else {
     else $type = "1"; //debug
     
     if(isset($_POST['flag'])) $flag = $_POST['flag'];
-    else $type = "0"; //debug
+    else $flag = "0"; //debug
     
     if(isset($_POST['flag2'])) $flag2= $_POST['flag2'];
-    else $type = "0"; //debug
+    else $flag2 = "0"; //debug
 	
     $query = "SELECT * FROM dispos WHERE id_d=$type";
 

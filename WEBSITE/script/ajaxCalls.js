@@ -84,7 +84,7 @@ function getSmartETel(info, cont) {
 					content+='<p class="nomecateg">Display:</p>';
 					content+='<p class="valcateg">'+json[i].display_d+'"</p>';
 					content+='<div class="botST">';
-					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span id='+json[i].classBot_d+'"><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
 				
@@ -137,7 +137,7 @@ function getTVESL(info, cont){
 						content+='<p class="valcateg">'+json[i].dimens_tvSL+'</p>';
 						content+='</div>';
 					}
-					if(json[i].memoria_d!=''){
+					if(json[i].memoria1_d!=''){
 						content+='<div class="TVESLcateg">';
 						content+='<p class="nomecateg">Memoria:</p>';
 						if(json[i].memoria2_d!=''){
@@ -161,7 +161,7 @@ function getTVESL(info, cont){
 						content+='</div>';
 					}
 					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_d+'>';
-					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span id='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
 					content+='</div></div></div>';
 				}
 				
@@ -187,17 +187,64 @@ function getDevice(info, flag, flag2) {
             var json=JSON.parse(response);
 			var content1='<iframe id="videoD" src='+json[0].video_d+' frameborder="0" allowfullscreen></iframe>';
 			var content2='';
-			var content3=json[0].prz_int_d+' €';
 			var content4=json[0].prz_scn_d+' €';
 			var content5='';	
+			
+			if(json[0].tipo_d=='ST'){
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#smartphoneTelefoni"> Smartphone e telefoni> </a><a id="navlast"href="#device">'+json[0].nome_d+'</a>');
+			}
+			if(json[0].tipo_d=='TSL'){
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#tvSmartLiving"> TV e Smart Living> </a><a id="navlast"href="#device">'+json[0].nome_d+'</a>');
+			}
+				
 				if(json[0].colore2_d!=""){
 					$(".carousel-colors").append(content5);
 					$("#carColC2").css("background-color", json[0].colore2_d);
 				}
+				
+				document.getElementById("frecciaDx").onclick=function(){
+						if(flag==0 && json[0].img2_d!=''){
+							$("#frecciaDx").css("opacity","0.6");
+							$("#frecciaSx").css("opacity","1");
+							$("#carImgC1").css("background-color","rgba(255, 0, 0, 0.5)");
+							$("#carImgC2").css("background-color","rgba(255, 0, 0, 0.9)");						
+							flag=1;
+							getDevice(info,flag, flag2);
+						}
+					}
+					document.getElementById("frecciaSx").onclick=function(){
+						if(flag==1){
+							$("#frecciaSx").css("opacity","0.6");
+							$("#frecciaDx").css("opacity","1");
+							$("#carImgC2").css("background-color","rgba(255, 0, 0, 0.5)");
+							$("#carImgC1").css("background-color","rgba(255, 0, 0, 0.9)"); 
+							
+							flag=0;
+							getDevice(info,flag, flag2);
+						}
+					}
+				
+					document.getElementById("carColC2").onclick=function(){
+						if(flag2==0 && json[0].colore2_d){
+							$("#carColC2").css("border","3px solid #339999");	
+							$("#carColC1").css("border","3px solid white");							
+							flag2=1;
+							getDevice(info,flag, flag2);
+						}
+					}
 					
+					document.getElementById("carColC1").onclick=function(){
+						if(flag2==1){
+							$("#carColC1").css("border","3px solid #339999");
+							$("#carColC2").css("border","3px solid white");
+							
+							flag2=0;
+							getDevice(info,flag, flag2);
+						}
+					}
+								
 						
 				if(flag2==0){
-					content2='<img src="'+json[0].img1_d+'">';
 					if(flag==0 && json[0].img1_d!=""){					
 						content2='<img src="'+json[0].img1_d+'">';
 					}
@@ -206,8 +253,7 @@ function getDevice(info, flag, flag2) {
 					}
 				
 				}
-				else{
-					content2='<img src="'+json[0].img3_d+'">';	
+				else{	
 					if(flag==0 && json[0].img3_d!=""){					
 						content2='<img src="'+json[0].img3_d+'">';
 					}
@@ -215,22 +261,26 @@ function getDevice(info, flag, flag2) {
 						content2='<img src="'+json[0].img4_d+'">';
 					}
 				}
-				
-		
-			
-			
-					
-                    
+				                   
 		
 			// based on id I will fill the related divs
 					$(".titDispos").html(json[0].nome_d);
                     $(".videoDispos").html(content1);
                     $(".imgDispos").html(content2);
-                    $(".prezzoTotDispos").html(content3);
+					if(json[0].prz_int_d!=''){
+						var content3=json[0].prz_int_d+' €';
+						$(".prezzoTotDispos").html(content3);
+					}
                     $(".prezzoScnDispos").html(content4);
                     $("#carColC1").css("background-color", json[0].colore1_d);
 					$(".titDescrDispos").html(json[0].titDescr_d);
                     $(".descrDispos").html(json[0].descr_d);
+					
+                    $("#devicetitle").html(json[0].devicetitle);					
+                    $("#deviceset").html(json[0].servass1);
+                    $("#deviceset").append(json[0].servass2);
+					
+					
         }, error: function(request,error){
             console.log("Error");
         }
@@ -242,13 +292,14 @@ function getDevice(info, flag, flag2) {
 }
 
 
-function getPromotions() {
+function getPromotions(info) {
 	
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getPromotions.php", //Relative or absolute path to file.php file
+		data: {id:info},
         success: function(response) {
             var json=JSON.parse(response);
             var content = '';
@@ -260,11 +311,12 @@ function getPromotions() {
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
 					content+='<div class="infoDisp">';
-					content+='<p class="nomecateg">Prezzo:</p>';
-					content+='<p class="valintcateg">'+json[i].prz_int_d+' €</p>';
-					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';
+					content+='<div class="nomecateg">Prezzo:</div>';
+					content+='<div class="valintcateg">'+json[i].prz_int_d+' €</div>';
+					content+='<div class="valsconto">'+json[i].sconto_d+' %</div>';
+					content+='<div class="valscncateg">'+json[i].prz_scn_d+' €</div>';
 					content+='<div class="botST">';
-					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span id='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
 				

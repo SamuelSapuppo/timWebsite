@@ -220,8 +220,6 @@ function funzioneFiltroTSL(){
 
 
 
-
-
 				
 function manager(args) {
 
@@ -417,7 +415,7 @@ function manager(args) {
 						document.getElementById("ckST4").onclick=function(){
 							localStorage.setItem("selection", 4);
 							funzioneFiltroST();								
-						};					
+						};										
 						
 					}									
 					break;					
@@ -472,7 +470,6 @@ function manager(args) {
 							localStorage.setItem("selection", 8);
 							funzioneFiltroTSL();							
 						};	
-													
 			}								
 			break;
 		}
@@ -481,53 +478,14 @@ function manager(args) {
 				
 				case "device": {
 					
+					var flag0=5;
 					var flag=0;
 					var flag2=0;
-					clickPageLinks();
-					getDevice('2',flag, flag2);	
+					clickPageLinks();			
 					
+					getDevice(flag0,flag, flag2);	
 					
-					document.getElementById("frecciaDx").onclick=function(){
-						if(flag==0){
-							$("#frecciaDx").css("opacity","0.6");
-							$("#frecciaSx").css("opacity","1");
-							$("#carImgC1").css("background-color","rgba(255, 0, 0, 0.5)");
-							$("#carImgC2").css("background-color","rgba(255, 0, 0, 0.9)");						
-							flag=1;
-							getDevice('2',flag, flag2);
-						}
-					}
-					document.getElementById("frecciaSx").onclick=function(){
-						if(flag==1){
-							$("#frecciaSx").css("opacity","0.6");
-							$("#frecciaDx").css("opacity","1");
-							$("#carImgC2").css("background-color","rgba(255, 0, 0, 0.5)");
-							$("#carImgC1").css("background-color","rgba(255, 0, 0, 0.9)"); 
-							
-							flag=0;
-							getDevice('2',flag, flag2);
-						}
-					}
-					
-					
-           			document.getElementById("carColC2").onclick=function(){
-						if(flag2==0){
-							$("#carColC2").css("border","3px solid #339999");	
-							$("#carColC1").css("border","3px solid white");							
-							flag2=1;
-							getDevice('2',flag, flag2);
-						}
-					}
-					
-					document.getElementById("carColC1").onclick=function(){
-						if(flag2==1){
-							$("#carColC1").css("border","3px solid #339999");
-							$("#carColC2").css("border","3px solid white");
-							
-							flag2=0;
-							getDevice('2',flag, flag2);
-						}
-					}
+           			
 				break;
 				}
 				
@@ -535,8 +493,8 @@ function manager(args) {
 				case "promotions": {
 					subRestore();
 					clickPageLinks();
-					$(".nav").html('<a href="index.html">HOME> </a> <a href="#promotions">PROMOZIONI> </a>');
-					getPromotions();
+					$(".nav").html('<a href="index.html">HOME> </a> <a id="navlast" href="#promotions">PROMOZIONI </a>');
+					getPromotions("");
 					break;
 												
 				}
