@@ -730,7 +730,7 @@ a {
 	color:white;
 	line-height: 2;
 	font-size:15px;
-	margin-top:500px;
+	margin-top:300px;
 }
 .titDescrDispos{
 	position:relative;
@@ -748,40 +748,54 @@ a {
 	height:60px;	
 }
 
-.carousel-colour{	
+.carousel-colors{	
 	position:absolute;
 	z-index: 7;
 	margin-left:-30px;
 	margin-top:0px;
 }
 
-.carousel-colour li {
-    width: 50px !important;
-    height: 50px !important;
-    border: 2px solid black !important;
+.carousel-colors li {
+    width: 40px !important;
+    height: 40px !important;
     margin: 1px !important;
 	display: inline-block;
 	border-radius: 100px;
+	
 }
 
-.carousel-img-colour{	
+.carousel-img-colors{	
 	position:absolute;
 	z-index: 7;
 	margin-left:170px;
 	margin-top:350px;
 }
 
-.carousel-img-colour li {
+.carousel-img-colors li {
     width: 15px !important;
     height: 15px !important;
-    border: 2px solid black !important;
+    border: 2px solid rgba(255, 0, 0, 1)!important;
     margin: 1px !important;
 	display: inline-block;
 	border-radius: 100px;
 }
 
+#carImgC1{	
+	background-color: rgba(255, 0, 0, 0.9);
+}
+
+#carImgC2{	
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#carColC1{
+	border: 3px solid #339999;
+}
+
+
 #frecciaSx{
 	position:absolute;
+	opacity:0.6;
 	margin-top:190px;
 	margin-left:70px;
 	height:50px;

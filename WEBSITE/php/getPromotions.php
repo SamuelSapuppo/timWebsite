@@ -2,7 +2,7 @@
 /*
  * Tim Website: HYP Project 2015-16
  * getDevices.php
- * Query for Smartphone & Telefoni
+ * Query for Devices
  * Author: Sapuppo Samuel
  */
 
@@ -18,20 +18,8 @@ if (mysqli_connect_errno()) { //verify connection
     exit(); //do nothing else
 }
 		
-else {
-
-
-    if(isset($_POST['id'])) $type = $_POST['id'];
-    else $type = "1"; //debug
-    
-    if(isset($_POST['flag'])) $flag = $_POST['flag'];
-    else $type = "0"; //debug
-    
-    if(isset($_POST['flag2'])) $flag2= $_POST['flag2'];
-    else $type = "0"; //debug
-	
-    $query = "SELECT * FROM dispos WHERE id_d=$type";
-
+else {   
+		$query = "SELECT * FROM dispos WHERE prezzo_int_d NOT LIKE ''";
 
     //query execution
     $result = $mysqli->query($query);
