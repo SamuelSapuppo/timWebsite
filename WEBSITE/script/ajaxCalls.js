@@ -69,7 +69,7 @@ function getSmartETel(info, cont) {
 					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
 				}
 				for(var i=0;i<json.length;i++){
-                    content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img_d+'">';
+                    content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
 					content+='<div class="infoDisp">';
 					content+='<p class="nomecateg">Prezzo:</p>';
@@ -122,7 +122,7 @@ function getTVESL(info, cont){
 				}
 				for(var i=0;i<json.length;i++){
 					
-					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img_d+'">';
+					content+='<div class="box-dispos"><img class="img-TVESL" src="'+json[i].img1_d+'">';
 					content+='<div class="titTVESL">';
                     content+='<p>'+json[i].marca_d+'</p>';
                     content+='<p>'+json[i].nome_d+'</p>';
@@ -175,30 +175,106 @@ function getTVESL(info, cont){
 
 }
 
-function getDevice(info) {
+function getDevice(info, flag, flag2) {
 	
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getDevice.php", //Relative or absolute path to file.php file
-        data: {id:info},
+        data: {id:info, flag:flag, flag2:flag2},
         success: function(response) {
             var json=JSON.parse(response);
 			var content1='<iframe id="videoD" src='+json[0].video_d+' frameborder="0" allowfullscreen></iframe>';
-			var content2='<img src="'+json[0].img_d+'">';
+			var content2='';
 			var content3=json[0].prz_int_d+' €';
 			var content4=json[0].prz_scn_d+' €';
-            
+			var content5='';	
+				if(json[0].colore2_d!=""){
+					$(".carousel-colors").append(content5);
+					$("#carColC2").css("background-color", json[0].colore2_d);
+				}
+					
+						
+				if(flag2==0){
+					content2='<img src="'+json[0].img1_d+'">';
+					if(flag==0 && json[0].img1_d!=""){					
+						content2='<img src="'+json[0].img1_d+'">';
+					}
+					if(flag==1 && json[0].img2_d!=""){	
+						content2='<img src="'+json[0].img2_d+'">';
+					}
+				
+				}
+				else{
+					content2='<img src="'+json[0].img3_d+'">';	
+					if(flag==0 && json[0].img3_d!=""){					
+						content2='<img src="'+json[0].img3_d+'">';
+					}
+					if(flag==1 && json[0].img4_d!=""){	
+						content2='<img src="'+json[0].img4_d+'">';
+					}
+				}
+				
+		
+			
+			
+					
+                    
+		
 			// based on id I will fill the related divs
 					$(".titDispos").html(json[0].nome_d);
                     $(".videoDispos").html(content1);
                     $(".imgDispos").html(content2);
                     $(".prezzoTotDispos").html(content3);
                     $(".prezzoScnDispos").html(content4);
-                    $(".carousel-color").css("background-color", json[0].colore_d);
-                    $(".titDescrDispos").html(json[0].titDescr_d);
+                    $("#carColC1").css("background-color", json[0].colore1_d);
+					$(".titDescrDispos").html(json[0].titDescr_d);
                     $(".descrDispos").html(json[0].descr_d);
+        }, error: function(request,error){
+            console.log("Error");
+        }
+		
+		
+		
+    });
+
+}
+
+
+function getPromotions() {
+	
+        $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getPromotions.php", //Relative or absolute path to file.php file
+        success: function(response) {
+            var json=JSON.parse(response);
+            var content = '';
+			
+				if(json.length==0){
+					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
+				}
+				for(var i=0;i<json.length;i++){
+                    content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
+                    content+='<p class="titDisp">'+json[i].nome_d+'</p>';
+					content+='<div class="infoDisp">';
+					content+='<p class="nomecateg">Prezzo:</p>';
+					content+='<p class="valintcateg">'+json[i].prz_int_d+' €</p>';
+					content+='<p class="valcateg">'+json[i].prz_scn_d+' €</p>';
+					content+='<div class="botST">';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+                    content+='</div></div></div>';
+				}
+				
+				
+				
+            // based on id I will fill the related divs
+			
+                    $(".promo").html(content);
+					
+				
         }, error: function(request,error){
             console.log("Error");
         }
