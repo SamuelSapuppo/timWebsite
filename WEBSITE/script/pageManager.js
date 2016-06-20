@@ -20,7 +20,7 @@ function clickPageLinks() {
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
 			newElm.addClass('active');
-			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving') {
+			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving' || page='asspage' || page='device' ||page='actrules_timvision' || page='formreg_timvision') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
