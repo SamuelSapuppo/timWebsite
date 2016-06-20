@@ -515,7 +515,14 @@ function manager(args) {
 					$('.promotions_page').css('margin-top', '-4px')
 					break;
 				}
-				
+	
+				case "buy": {
+					
+					getBuy(2);	
+					
+           			
+				break;
+				}
 				
 				
 				default: clickPageLinks(); break;

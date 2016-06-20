@@ -523,3 +523,94 @@ function getConfiphone(callback){
     });
 
 }
+
+function getBuy(info){
+
+    $.ajax({
+        method: "POST",
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getDevice.php", //Relative or absolute path to file.php file
+		data: {id:info},
+        success: function(response) {
+			var json=JSON.parse(response);
+			var flag2=0;
+			var content = '';
+			
+			if(json[0].tipo_d=='ST'){
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#smartphoneTelefoni"> Smartphone e telefoni> </a><a href="#device">'+json[0].nome_d+'</a><a id="navlast" href="#buy">> Acquisto</a>');
+			}
+			if(json[0].tipo_d=='TSL'){
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#tvSmartLiving"> TV e Smart Living> </a><a href="#device">'+json[0].nome_d+'</a><a id="navlast" href="#buy">> Acquisto</a>');
+			}
+			
+			content+='<img id="imgDispBuy" src="'+json[0].img1_d+'">';
+			content+='<div class="specifDispBuy">';
+			content+='<p id="nomeDispBuy" '+json[0].nome_d+'>';
+			content+='<p>Specifiche: </p>';
+			if(json[0].memoria1_d!=''){
+				content+='<p> Memoria: '+json[0].memoria1_d+'';
+				if(json[0].memoria2_d!=''){
+					content+=' / '+json[0].memoria1_d+'';
+				}			
+				content+='</p>';
+			}
+			if(json[0].display_d!=''){
+				content+='<p> Display: '+json[0].display_d+'</p>';
+			}
+			if(json[0].display_tvSL!=''){
+				content+='<p> Display: '+json[0].display_tvSL+'</p>';
+			}
+			if(json[0].dimens_tvSL!=''){
+				content+='<p> Dimensione: '+json[0].dimens_tvSL+'</p>';
+			}
+			if(json[0].caratt_tvSL!=''){
+				content+='<p> Caratteristiche: '+json[0].caratt_tvSL+'</p>';
+			}
+			content+='</div>';
+			content+='<div class= "boxPrzBuy">';
+			content+='<p id="przScnBuy">Prezzo:<br>';
+			if(json[0].prz_int_d!=''){
+				content+=''+json[0].prz_int_d+'€ ';
+			}
+			content+=''+json[0].prz_scn_d+'€</p>';
+			content+='<p>Spese di spedizione:<br>';
+			content+='Gratis</p>';
+			content+='<h2 id="przFinBuy">Prezzo Finale:<br>'+json[0].prz_scn_d+' €</h2>';
+			
+			
+			content+='</div>';
+			
+			
+					if(json[0].colore2_d!=""){
+						$("#carColC2Buy").css("background-color", json[0].colore2_d);
+					}
+				
+					document.getElementById("carColC2Buy").onclick=function(){
+						if(flag2==0 && json[0].colore2_d){
+							$("#carColC2Buy").css("border","3px solid #339999");	
+							$("#carColC1Buy").css("border","3px solid white");							
+							flag2=1;
+						}
+					}
+					
+					document.getElementById("carColC1Buy").onclick=function(){
+						if(flag2==1){
+							$("#carColC1Buy").css("border","3px solid #339999");
+							$("#carColC2Buy").css("border","3px solid white");
+							flag2=0;
+						}
+					}
+			
+			
+			
+			$(".boxDispBuy").html(content);
+            $("#carColC1Buy").css("background-color", json[0].colore1_d);
+			
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}

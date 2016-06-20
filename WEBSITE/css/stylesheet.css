@@ -1253,3 +1253,106 @@ a {
 	font-size: 17px;
 	color: white;
 }
+
+/***************/
+/*---- BUY ----*/
+/***************/
+.boxBuy{
+	color:white;
+}
+
+.boxDispBuy{
+	width:700px;
+	height:250px;
+	border: solid 2px white;
+	background-color:#3366FF;
+}
+
+.specifDispBuy{
+	position:relative;
+	margin-left:200px;
+	margin-top:-200px;
+}
+
+.boxPrzBuy{
+	position:relative;
+	margin-left:500px;
+	margin-top:-125px;	
+}
+
+.condizAcquisto{
+	margin-top:50px;
+	font-size:13px;
+}
+
+.radioConferma{
+	position:center;
+}
+
+#imgCircuito{
+	position:absolute;
+	width: 280px;
+	height: 75px;
+	margin-top:16px;
+	margin-left:400px;
+}
+
+.datiPagBuy{
+	display: inline-block;
+}
+
+.circ{
+	width:150px;
+	margin-left:38px;
+	text-align:center;
+}
+#numcarta{
+	margin-left:70px;
+}
+#codsic{
+	margin-left:30px;
+}
+#titolare{
+	margin-left:79px;
+}
+.scadenza{
+	margin-left:58px;
+	text-align:center;
+}
+#imgDispBuy{
+	margin-top:25px;
+	margin-left:30px;
+	width:100px;
+	height:200px
+}
+
+#nomeDispBuy{
+	font-size:20px;
+}
+#przScnBuy{
+	word-spacing: 25px;
+}
+
+.carousel-colorsBuy{	
+	position:relative;
+	z-index: 7;
+	margin-left:-30px;
+	margin-top:0px;
+}
+
+.carousel-colorsBuy li {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 1px !important;
+	display: inline-block;
+	border-radius: 100px;
+	
+}
+
+.boxColoreDisposBuy{
+	position:relative;
+}
+
+#carColC1Buy{
+	border: 3px solid #339999;
+}
