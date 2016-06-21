@@ -23,7 +23,7 @@ function clickPageLinks() {
 			
 			if(page=='home' || page=='assistance' || page=='devices' || page=='smartlife' || page=='assistance' || page=='promotions' || page=='whoweare')
 				restore();
-			else {
+			else if(page=='supportoConf' || page=='tvSmartLiving' || page=='smartphoneTelefoni' || page=='tvent_cat') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
@@ -517,8 +517,8 @@ function manager(args) {
 					getAss(1,function () { clickPageLinks(); });
                     		
 						
-					$(".submenus").slideDown();	
-					$('.assistance_page').css('margin-top', '-4px');
+					$(".submenua").slideDown();	
+					$('.promotions_page').css('margin-top', '-4px');
 					
            			
 				break;
