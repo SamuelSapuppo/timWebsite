@@ -614,3 +614,41 @@ function getBuy(info){
     });
 
 }
+
+function getAss(info, callback) {
+	$.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://sitotim.altervista.org/php/getAss.php", //Relative or absolute path to file.php file
+        data: {id:info},
+        success: function(response) {
+            var json=JSON.parse(response);
+			var contenuto=json[0].Contenuto;
+			var cont2=json[0].Cont2;
+			var cont3=json[0].Cont3;
+			var cont4=json[0].Cont4;
+			var cont5=json[0].Cont5;
+			var cont6=json[0].Cont6;
+			
+			if(json[0].Cat=='SupConf'){
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a><a href="#supportoConf"> Supporto tecnico e configurazione> </a><a id="navlast"href="#device">'+json[0].Nome+'</a>');
+			}
+			
+			// based on id I will fill the related divs
+					$("#asspagecontent").html(contenuto);
+                    $("#asspagecontent").append(cont2);
+                    $("#asspagecontent").append(cont3);
+					$("#asspagefaq").html(cont5);
+                    $("#assdisp").html(cont6);
+					
+					callback();
+					
+					
+        }, error: function(request,error){
+            console.log("Error");
+        }
+	});
+	
+
+}

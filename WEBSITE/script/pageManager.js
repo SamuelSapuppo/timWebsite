@@ -506,11 +506,14 @@ function manager(args) {
 				}
 				
 				case "asspage": {
-					getConfiphone(function() {clickPageLings();});
-					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a> <a href="#supportoConf">Supporto Tecnico e configurazione> </a> <a id="navlast" href="#asspage">Configurazione mail i-Phone</a>');
-					$(".submenua").show();	
-					$('.promotions_page').css('margin-top', '-4px')
-					break;
+					getAss(1,function () { clickPageLinks(); });
+                    		
+						
+					$(".submenus").show();	
+					$('.assistance_page').css('margin-top', '-4px');
+					
+           			
+				break;
 				}
 	
 				case "buy": {
