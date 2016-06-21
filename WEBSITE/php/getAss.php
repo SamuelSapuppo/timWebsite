@@ -18,10 +18,10 @@ if (mysqli_connect_errno()) { //verify connection
     exit(); //do nothing else
 }
 else {
-    //echo "Successful connection"; // connection ok
-
-    //# extract results mysqli_result::fetch_array
-    $query = "SELECT Contenuto FROM ConfMail";
+     if(isset($_POST['id'])) $type = $_POST['id'];
+    else $type = "1"; //debug
+    $query = "SELECT * FROM AssService WHERE IdC=$type";
+	
     //query execution
     $result = $mysqli->query($query);
 
