@@ -477,13 +477,10 @@ function manager(args) {
 				
 				
 				case "device": {
-					
-					var flag0=5;
-					var flag=0;
-					var flag2=0;
 					clickPageLinks();			
-					
-					getDevice(flag0,flag, flag2);	
+						
+					$(".submenud").show();	
+					$('.smartlife_page').css('margin-top', '-4px');
 					
            			
 				break;
@@ -517,9 +514,11 @@ function manager(args) {
 				}
 	
 				case "buy": {
-					
+					clickPageLinks();		
 					getBuy(2);	
 					
+					$(".submenud").show();	
+					$('.smartlife_page').css('margin-top', '-4px');
            			
 				break;
 				}

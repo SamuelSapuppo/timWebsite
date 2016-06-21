@@ -84,7 +84,7 @@ function getSmartETel(info, cont) {
 					content+='<p class="nomecateg">Display:</p>';
 					content+='<p class="valcateg">'+json[i].display_d+'"</p>';
 					content+='<div class="botST">';
-					content+='<span id='+json[i].classBot_d+'"><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'"><a href='+json[i].hrefBot_d+' onclick="getDevice('+json[i].id_d+',0,0);">SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
 				
@@ -161,7 +161,7 @@ function getTVESL(info, cont){
 						content+='</div>';
 					}
 					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_d+'>';
-					content+='<span id='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+' onclick="getDevice('+json[i].id_d+',0,0);">SCOPRI</a></span>';
 					content+='</div></div></div>';
 				}
 				
@@ -588,7 +588,7 @@ function getBuy(info){
 					document.getElementById("carColC2Buy").onclick=function(){
 						if(flag2==0 && json[0].colore2_d){
 							$("#carColC2Buy").css("border","3px solid #339999");	
-							$("#carColC1Buy").css("border","3px solid white");							
+							$("#carColC1Buy").css("border","3px solid #002080");							
 							flag2=1;
 						}
 					}
@@ -596,7 +596,7 @@ function getBuy(info){
 					document.getElementById("carColC1Buy").onclick=function(){
 						if(flag2==1){
 							$("#carColC1Buy").css("border","3px solid #339999");
-							$("#carColC2Buy").css("border","3px solid white");
+							$("#carColC2Buy").css("border","3px solid #002080");
 							flag2=0;
 						}
 					}

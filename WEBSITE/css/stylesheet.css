@@ -1356,3 +1356,24 @@ a {
 #carColC1Buy{
 	border: 3px solid #339999;
 }
+
+.botDispBuy a {
+	float: left;
+	width: 150px;
+	height: 35px;
+	padding-top:7px;
+	z-index:2;
+}
+
+.botDispBuy a:link, .botDispBuy a:visited {
+	font-size:110%;
+	color: white;
+	background-color: #F50733;	
+	border: solid 2px white;
+	text-align: center;
+	display: block;
+}
+
+.botDispBuy a:hover {
+	background-color: #F5585B;
+}
