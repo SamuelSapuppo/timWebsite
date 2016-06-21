@@ -658,9 +658,9 @@ $(".expand").click(function() {
 	
 });
 
-/*function bclick() {
-	var lol= $(this).getElementsByClassName("expand");
-	lol.closest(".subsection").find(".unseen").slideToggle();
+function bclick(id) {
+	var cat='.expand'+id;
+	$(cat).closest(".subsection").find(".unseen").slideToggle();
 	
 	
-}*/
+}
