@@ -1189,6 +1189,19 @@ a {
 	font-size: 16px;
 	color: white;
 }
+
+.supportoconf button {
+	background: #ccf5ff;
+    border: 1px solid #3366FF;
+	width: 100px;
+	height: 30px;
+}
+.supportoconf button:hover {
+	background: #66e0ff;
+    border: 1px solid #3366FF;
+	width: 100px;
+	height: 30px;
+}
 .supportoconf fieldset {
 	width: 315px;
 	border-radius: 10px 10px 10px 10px;
@@ -1222,11 +1235,6 @@ a {
     min-width: 80px;
 }
 
-.supportoconf a.expand::before {
-    display: inline-block;
-    content: attr(data-close);
-}
-
 .unseen {
 	display: none;
 }
@@ -1240,10 +1248,6 @@ a {
 	text-decoration: underline;
 }
 
-.expand {
-	width: 100px;
-	height: 30px;
-}
 
 /***************************/
 /*----Pagina assistenza----*/

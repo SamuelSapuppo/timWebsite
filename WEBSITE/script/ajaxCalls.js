@@ -652,3 +652,15 @@ function getAss(info, callback) {
 	
 
 }
+
+$(".expand").click(function() {
+	$(this).closest(".subsection").find(".unseen").slideToggle();
+	
+});
+
+/*function bclick() {
+	var lol= $(this).getElementsByClassName("expand");
+	lol.closest(".subsection").find(".unseen").slideToggle();
+	
+	
+}*/
