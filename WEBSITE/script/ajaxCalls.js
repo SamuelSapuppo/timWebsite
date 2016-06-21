@@ -84,7 +84,7 @@ function getSmartETel(info, cont) {
 					content+='<p class="nomecateg">Display:</p>';
 					content+='<p class="valcateg">'+json[i].display_d+'"</p>';
 					content+='<div class="botST">';
-					content+='<span class='+json[i].classBot_d+'"><a href='+json[i].hrefBot_d+' onclick="getDevice('+json[i].id_d+',0,0);">SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'"><a href='+json[i].hrefBot_d+' onclick="idDevicePressed('+json[i].id_d+');">SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
 				
@@ -161,10 +161,9 @@ function getTVESL(info, cont){
 						content+='</div>';
 					}
 					content+='<div class="botTVESL" id=idBot_tvSL'+json[i].id_d+'>';
-					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+' onclick="getDevice('+json[i].id_d+',0,0);">SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+' onclick="idDevicePressed('+json[i].id_d+');">SCOPRI</a></span>';
 					content+='</div></div></div>';
 				}
-				
             // based on id I will fill the related divs
                     $(".tvsl").html(content);
 					
@@ -190,18 +189,21 @@ function getDevice(info, flag, flag2) {
 			var content4=json[0].prz_scn_d+' €';
 			var content5='';	
 			
+				console.log(json[0].nome_d);   
+				
 			if(json[0].tipo_d=='ST'){
 				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#smartphoneTelefoni"> Smartphone e telefoni> </a><a id="navlast"href="#device">'+json[0].nome_d+'</a>');
 			}
 			if(json[0].tipo_d=='TSL'){
 				$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a href="#tvSmartLiving"> TV e Smart Living> </a><a id="navlast"href="#device">'+json[0].nome_d+'</a>');
 			}
-				
 				if(json[0].colore2_d!=""){
 					$(".carousel-colors").append(content5);
 					$("#carColC2").css("background-color", json[0].colore2_d);
 				}
 				
+				
+			
 				document.getElementById("frecciaDx").onclick=function(){
 						if(flag==0 && json[0].img2_d!=''){
 							$("#frecciaDx").css("opacity","0.6");
@@ -212,6 +214,7 @@ function getDevice(info, flag, flag2) {
 							getDevice(info,flag, flag2);
 						}
 					}
+									
 					document.getElementById("frecciaSx").onclick=function(){
 						if(flag==1){
 							$("#frecciaSx").css("opacity","0.6");
@@ -261,7 +264,7 @@ function getDevice(info, flag, flag2) {
 						content2='<img src="'+json[0].img4_d+'">';
 					}
 				}
-				                   
+				                
 		
 			// based on id I will fill the related divs
 					$(".titDispos").html(json[0].nome_d);
@@ -294,6 +297,7 @@ function getDevice(info, flag, flag2) {
 
 function getPromotions(info) {
 	
+					console.log("qui arrivo2");
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
@@ -301,12 +305,15 @@ function getPromotions(info) {
         url: "http://sitotim.altervista.org/php/getPromotions.php", //Relative or absolute path to file.php file
 		data: {id:info},
         success: function(response) {
+			
+					console.log("qui arrivo3");
             var json=JSON.parse(response);
             var content = '';
 			
 				if(json.length==0){
 					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
 				}
+				else{
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
@@ -316,8 +323,9 @@ function getPromotions(info) {
 					content+='<div class="valsconto">'+json[i].sconto_d+' %</div>';
 					content+='<div class="valscncateg">'+json[i].prz_scn_d+' €</div>';
 					content+='<div class="botST">';
-					content+='<span id='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
+				}
 				}
 				
 				
@@ -633,6 +641,7 @@ function getAss(info, callback) {
 			
 			if(json[0].Cat=='SupConf'){
 				$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a><a href="#supportoConf"> Supporto tecnico e configurazione> </a><a id="navlast"href="#device">'+json[0].Nome+'</a>');
+				localStorage.setItem("selectD", 2);
 			}
 			
 			// based on id I will fill the related divs

@@ -19,7 +19,7 @@ if (mysqli_connect_errno()) { //verify connection
 }
 		
 else {   
-		$query = "SELECT * FROM dispos WHERE prezzo_int_d = 449.90";
+		$query = "SELECT * FROM dispos WHERE prezzo_int_d !="";
 
     //query execution
     $result = $mysqli->query($query);

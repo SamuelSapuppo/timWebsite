@@ -853,7 +853,26 @@ a {
 	background-color: #F5585B;
 }
 
-
+#confiPhoneLink {
+	position:absolute;
+	width:291px;
+	height:200px;	
+}
+#confConnLink{	
+	margin-left:280px;
+	width:291px;
+	height:200px;	
+}
+#deviceset a{
+	color:white;
+	font-size:13px;
+}
+#deviceset p{
+	position:absolute;
+	margin-left:80px;
+	margin-top:100px;
+	
+}
 
 /********************/
 /*----ASSISTENZA----*/

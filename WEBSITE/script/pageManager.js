@@ -218,7 +218,9 @@ function funzioneFiltroTSL(){
 						
 }
 
-
+function idDevicePressed(id){
+	localStorage.setItem("selectD", id);	
+}
 
 				
 function manager(args) {
@@ -247,6 +249,10 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();					
 					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');	
+					
+					localStorage.setItem("selection",1);
+					find('.owl-next').html('<i class="fa fa-angle-right"></i>');
+					
 					break;
 				}
 				
@@ -284,46 +290,36 @@ function manager(args) {
 					$('.smartlife_page').css('margin-top', '-4px');
 					document.getElementById("li01").onclick=function(){
 							localStorage.setItem("selection", 1);
-							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("tuttiSmartphoneBot").onclick=function(){
 							localStorage.setItem("selection", 1);
-							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("smartphoneBot").onclick=function(){
 						localStorage.setItem("selection", 2);
-						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("iphoneBot").onclick=function(){
 						localStorage.setItem("selection", 3);
-						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("altroSmartphoneBot").onclick=function(){
 						localStorage.setItem("selection", 4);
-						localStorage.setItem("useSelection", true);
 					};
 					
 					
 					
 					document.getElementById("li04").onclick=function(){
 							localStorage.setItem("selection", 5);
-							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("tuttiTVSLBot").onclick=function(){
 							localStorage.setItem("selection", 5);
-							localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("tvBot").onclick=function(){
 						localStorage.setItem("selection", 6);
-						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("smartwatchBot").onclick=function(){
 						localStorage.setItem("selection", 7);
-						localStorage.setItem("useSelection", true);
 					};
 					document.getElementById("altroTVSLBot").onclick=function(){
 						localStorage.setItem("selection", 8);
-						localStorage.setItem("useSelection", true);
 					};
 					
 					break;
@@ -373,8 +369,7 @@ function manager(args) {
 					$('.smartlife_page').css('margin-top', '-4px');
 					var checkedElem = '';
 					
-					if(localStorage.getItem("useSelection")=="true"){
-						localStorage.setItem("useSelection", true);
+					
 						switch (localStorage.getItem("selection")){
 							case "1":{
 								document.getElementById("ckST1").checked="true";
@@ -418,9 +413,7 @@ function manager(args) {
 						document.getElementById("ckST4").onclick=function(){
 							localStorage.setItem("selection", 4);
 							funzioneFiltroST();								
-						};										
-						
-					}									
+						};								
 					break;					
 				}
 				
@@ -430,8 +423,7 @@ function manager(args) {
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');		
 					
-					if(localStorage.getItem("useSelection")=="true"){
-						localStorage.setItem("useSelection", true);
+					
 						switch (localStorage.getItem("selection")){
 							case "5":{
 								document.getElementById("ckTSL1").checked="true";
@@ -476,17 +468,18 @@ function manager(args) {
 							localStorage.setItem("selection", 8);
 							funzioneFiltroTSL();							
 						};	
-			}								
-			break;
-		}
+									
+						break;
+					}
 				
 				
 				
 				case "device": {
 					clickPageLinks();			
-						
+					var iddispis = localStorage.getItem("selectD");
 					$(".submenud").show();	
 					$('.smartlife_page').css('margin-top', '-4px');
+					getDevice(iddispis,0,0);
 					
            			
 				break;
@@ -497,7 +490,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a id="navlast" href="#promotions">PROMOZIONI </a>');
-					getPromotions("");
+					getPromotions('');
 					break;
 												
 				}
@@ -524,7 +517,7 @@ function manager(args) {
 	
 				case "buy": {
 					clickPageLinks();		
-					getBuy(2);	
+					getBuy(localStorage.getItem("selectD"));	
 					
 					$(".submenud").show();	
 					$('.smartlife_page').css('margin-top', '-4px');
