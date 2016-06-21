@@ -246,7 +246,7 @@ function manager(args) {
 				case "home": {
 					subRestore();
 					clickPageLinks();					
-					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');
+					$(".nav").html('<a href="index.html" id="navlast">HOME </a> ');	
 					break;
 				}
 				
@@ -396,7 +396,10 @@ function manager(args) {
 								getSmartETel('4','');
 								break;
 							}
-							default: {								
+							default: {	
+								document.getElementById("ckST1").checked="true";
+								getSmartETel('1','');
+								break;
 							}
 						}
 						
@@ -426,7 +429,7 @@ function manager(args) {
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
 					$(".submenud").show();
 					$('.smartlife_page').css('margin-top', '-4px');		
-
+					
 					if(localStorage.getItem("useSelection")=="true"){
 						localStorage.setItem("useSelection", true);
 						switch (localStorage.getItem("selection")){
@@ -450,7 +453,10 @@ function manager(args) {
 								getTVESL('8','');
 								break;
 							}
-							default: {								
+							default: {	
+								document.getElementById("ckTSL1").checked="true";
+								getTVESL('5','');
+								break;
 							}
 						}
 						
