@@ -20,13 +20,15 @@ function clickPageLinks() {
             var prevElm = $('li[class*="active"]');
             prevElm.removeClass('active');
 			newElm.addClass('active');
-			if(page=='tvent_cat' || page=='smartphoneTelefoni' || page=='supportoConf' || page=='tvSmartLiving') {
+			
+			if(page=='home' || page=='assistance' || page=='devices' || page=='smartlife' || page=='assistance' || page=='promotions' || page=='whoweare')
+				restore();
+			else if(page=='supportoConf' || page=='tvSmartLiving' || page=='smartphoneTelefoni' || page=='tvent_cat') {
 				var preElm = $('li[class*="subm"]');
 				preElm.removeClass('subm');
 				newElm.addClass('subm');
 			}
-			else 
-				restore();
+			
 			
             manager(args);
         }
@@ -40,10 +42,10 @@ function subRestore() {
 	$('li[class*="subm"]').removeClass("subm");
 }
 function restore(){
-	$(".submenus").hide();
-	$(".submenud").hide();
-	$(".submenua").hide();
-	$(".submenuw").hide();
+	$(".submenus").slideUp();
+	$(".submenud").slideUp();
+	$(".submenua").slideUp();
+	$(".submenuw").slideUp();
 	$('.smartlife_page').css('margin-top', '4px');
 	$('.assistance_page').css('margin-top', '4px');
 	$('.promotions_page').css('margin-top', '4px');
@@ -259,7 +261,7 @@ function manager(args) {
 				case "timvision": {
 					getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
-					$(".submenus").show();	
+					$(".submenus").slideDown();	
 					$('.assistance_page').css('margin-top', '-4px');
 					$('.tvent_cat_page').addClass('subm');
 					break;
@@ -267,7 +269,7 @@ function manager(args) {
 				case "actrules_timvision": {
 					getActrules(function () {clickPageLinks();});
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a href="#timvision">Tim vision> </a> <a id="navlast" href="#actrules_timvision">Regolamento</a>');
-					$(".submenus").show();	
+					$(".submenus").slideDown();	
 					$('.assistance_page').css('margin-top', '-4px');
 					$('.tvent_cat_page').addClass('subm');
 					break;
@@ -276,7 +278,7 @@ function manager(args) {
 				case "formreg_timvision": {
 					getCosti(function () {clickPageLinks();});
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a href="#timvision">Tim vision> </a> <a href="#actrules_timvision">Regolamento> </a> <a id="navlast" href="#formreg_timvision">Sottoscrivi</a>');
-					$(".submenus").show();	
+					$(".submenus").slideDown();	
 					$('.assistance_page').css('margin-top', '-4px');
 					$('.tvent_cat_page').addClass('subm');
 					break;
@@ -286,7 +288,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
-					$(".submenud").show();
+					$(".submenud").slideDown();
 					$('.smartlife_page').css('margin-top', '-4px');
 					document.getElementById("li01").onclick=function(){
 							localStorage.setItem("selection", 1);
@@ -328,7 +330,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife" id="navlast">SMART LIFE</a>');
-					$(".submenus").show();
+					$(".submenus").slideDown();
 					$('.assistance_page').css('margin-top', '-4px');				
 					break;
 				}
@@ -336,7 +338,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance" id="navlast">ASSISTENZA</a>');
-					$(".submenua").show();
+					$(".submenua").slideDown();
 					$('.promotions_page').css('margin-top', '-4px');
 					break;
 				}
@@ -344,7 +346,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#whoweare" id="navlast">CHI SIAMO</a>');
-					$(".submenuw").show();
+					$(".submenuw").slideDown();
 					$('.thegroup_page').css('margin-top', '-4px');
 					break;
 				}
@@ -357,14 +359,14 @@ function manager(args) {
 					getTvent('6');
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat" id="navlast">Tv & Entertainment</a>');
 					clickPageLinks();
-					$(".submenus").show();	
+					$(".submenus").slideDown();	
 					$('.assistance_page').css('margin-top', '-4px');
 					break;
 				}
 				
 				case "smartphoneTelefoni": {
 					clickPageLinks();
-					$(".submenud").show();
+					$(".submenud").slideDown();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#smartphoneTelefoni"> Smartphone e telefoni</a>');
 					$('.smartlife_page').css('margin-top', '-4px');
 					var checkedElem = '';
@@ -420,7 +422,7 @@ function manager(args) {
 				case "tvSmartLiving": {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices">DISPOSITIVI> </a><a id="navlast" href="#tvSmartLiving"> TV e Smart Living</a>');
-					$(".submenud").show();
+					$(".submenud").slideDown();
 					$('.smartlife_page').css('margin-top', '-4px');		
 					
 					
@@ -475,9 +477,11 @@ function manager(args) {
 				
 				
 				case "device": {
-					clickPageLinks();			
+					clickPageLinks();	
 					var iddispis = localStorage.getItem("selectD");
 					$(".submenud").show();	
+						
+					$(".submenud").slideDown();	
 					$('.smartlife_page').css('margin-top', '-4px');
 					getDevice(iddispis,0,0);
 					
@@ -499,7 +503,7 @@ function manager(args) {
 				case "supportoConf": {
 					getSupporto(function () {clickPageLinks();});
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a> <a id="navlast" href="#supportoConf">Supporto Tecnico e configurazione </a> ');
-					$(".submenua").show();	
+					$(".submenua").slideDown();	
 					$('.promotions_page').css('margin-top', '-4px');
 					break;
 				}
@@ -508,8 +512,8 @@ function manager(args) {
 					getAss(1,function () { clickPageLinks(); });
                     		
 						
-					$(".submenus").show();	
-					$('.assistance_page').css('margin-top', '-4px');
+					$(".submenua").slideDown();	
+					$('.promotions_page').css('margin-top', '-4px');
 					
            			
 				break;
@@ -519,7 +523,7 @@ function manager(args) {
 					clickPageLinks();		
 					getBuy(localStorage.getItem("selectD"));	
 					
-					$(".submenud").show();	
+					$(".submenud").slideDown();	
 					$('.smartlife_page').css('margin-top', '-4px');
            			
 				break;

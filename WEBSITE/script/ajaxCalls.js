@@ -661,3 +661,15 @@ function getAss(info, callback) {
 	
 
 }
+
+$(".expand").click(function() {
+	$(this).closest(".subsection").find(".unseen").slideToggle();
+	
+});
+
+function bclick(id) {
+	var cat='.expand'+id;
+	$(cat).closest(".subsection").find(".unseen").slideToggle();
+	
+	
+}
