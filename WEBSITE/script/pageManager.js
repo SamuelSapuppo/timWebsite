@@ -494,7 +494,7 @@ function manager(args) {
 					subRestore();
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a id="navlast" href="#promotions">PROMOZIONI </a>');
-					getPromotions('');
+					getPromotions();
 					break;
 												
 				}

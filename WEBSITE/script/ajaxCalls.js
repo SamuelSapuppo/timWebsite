@@ -295,25 +295,21 @@ function getDevice(info, flag, flag2) {
 }
 
 
-function getPromotions(info) {
+function getPromotions(info, cont) {
 	
-					console.log("qui arrivo2");
         $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://sitotim.altervista.org/php/getPromotions.php", //Relative or absolute path to file.php file
-		data: {id:info},
+		data: {},
         success: function(response) {
-			
-					console.log("qui arrivo3");
             var json=JSON.parse(response);
             var content = '';
 			
 				if(json.length==0){
 					content='<div class="nessunDispos"><p>NESSUN DISPOSITIVO TROVATO</p></div>';
 				}
-				else{
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
@@ -325,7 +321,6 @@ function getPromotions(info) {
 					content+='<div class="botST">';
 					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
                     content+='</div></div></div>';
-				}
 				}
 				
 				
@@ -341,6 +336,7 @@ function getPromotions(info) {
     });
 
 }
+
 
 
 function getTimvision(callback){
