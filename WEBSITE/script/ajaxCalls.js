@@ -313,7 +313,7 @@ function getPromotions(info, cont) {
 				for(var i=0;i<json.length;i++){
                     content+='<div class="box-dispos"><img class="img-dispos" src="'+json[i].img1_d+'">';
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
-					content+='<div class="infoDisp">';
+					content+='<div class="infoDispPromo">';
 					content+='<div class="nomecateg">Prezzo:</div>';
 					content+='<div class="valintcateg"><p class="prezziInteri">'+json[i].prz_int_d+' €</p></div>';
 					content+='<div class="valsconto">'+json[i].sconto_d+' %</div>';

@@ -584,11 +584,11 @@ a {
 .TVESLcateg{
 	margin-top:25px;
 }
-.infoDisp{
+.infoDisp, .infoDispPromo{
 	margin-left:200px;	
 }
 
-.infoDisp p{
+.infoDisp p, .infoDispPromo p{
 	line-height: 0.3;
 }
 
@@ -705,9 +705,9 @@ a {
 }
 .boxPrezzoDispos{
 	line-height: 0.5;
-	position:relative;
-	left:531px;
-	top:128px;
+	position:absolute;
+	top:850px;
+	left:780px;
 	font-size:18px;	
 }
 .prezzoTotDispos{
@@ -721,10 +721,10 @@ a {
 }
 
 .boxColoreDispos{
-	position:relative;
-	left:507px;
-	top:140px;
-	font-size:20px;	
+	position: absolute;
+	top: 960px;
+	left: 750px;
+	font-size: 20px;	
 }
 
 .schTecDispos{
@@ -734,15 +734,16 @@ a {
 	margin-top:300px;
 }
 .titDescrDispos{
-	position:relative;
+	position:absolute;
 	width:180px;
 	float:left;
-	display:inline;
+    top: 1179px;
 }
 .descrDispos{
 	position:relative;
+	margin-left:200px;
+	margin-top:444px;
 	width:500px;
-	display:inline;
 }
 
 .coloreDispos{
@@ -960,6 +961,9 @@ a {
 	font-size:23px;
 }
 
+.infoDispPromo{
+	margin-top:-10px;
+}
 
 
 
