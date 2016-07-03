@@ -21,7 +21,7 @@ function clickPageLinks() {
             prevElm.removeClass('active');
 			newElm.addClass('active');
 			
-			if(page=='home' || page=='assistance' || page=='devices' || page=='smartlife' || page=='assistance' || page=='promotions' || page=='whoweare')
+			if(page=='home' || page=='assistance' || page=='devices' || page=='device' || page=='timvision' || page=='smartlife' || page=='assistance' || page=='asspage' || page=='promotions' || page=='whoweare')
 				restore();
 			else if(page=='supportoConf' || page=='tvSmartLiving' || page=='smartphoneTelefoni' || page=='tvent_cat') {
 				var preElm = $('li[class*="subm"]');
@@ -289,7 +289,8 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").slideDown();
-					$('.smartlife_page').css('margin-top', '-4px');
+					$('.smartlife_page').css('margin-top', '-4px');					
+					
 					document.getElementById("li01").onclick=function(){
 							localStorage.setItem("selection", 1);
 					};
@@ -477,15 +478,22 @@ function manager(args) {
 				
 				
 				case "device": {
-					clickPageLinks();	
+					clickPageLinks();
 					var iddispis = localStorage.getItem("selectD");
-					$(".submenud").show();	
-						
 					$(".submenud").slideDown();	
 					$('.smartlife_page').css('margin-top', '-4px');
 					getDevice(iddispis,0,0);
+					if(iddispis <=4){
+						$('li[class*="subm"]').removeClass('subm');
+						$('li[class*="smartphoneTelefoni_page"]').addClass('subm');
+					}
+					else{
+						$('li[class*="subm"]').removeClass('subm');
+						$('li[class*="tvSmartLiving_page"]').addClass('subm');
+					}
 					
            			
+			
 				break;
 				}
 				
@@ -495,8 +503,7 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a id="navlast" href="#promotions">PROMOZIONI </a>');
 					getPromotions();
-					break;
-												
+					break;												
 				}
 				
 				
@@ -514,6 +521,8 @@ function manager(args) {
 						
 					$(".submenua").slideDown();	
 					$('.promotions_page').css('margin-top', '-4px');
+					$('li[class*="subm"]').removeClass('subm');
+					$('li[class*="supportoConf_page"]').addClass('subm');
 					
            			
 				break;

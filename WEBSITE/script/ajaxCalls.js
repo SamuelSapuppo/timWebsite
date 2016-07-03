@@ -271,7 +271,7 @@ function getDevice(info, flag, flag2) {
                     $(".videoDispos").html(content1);
                     $(".imgDispos").html(content2);
 					if(json[0].prz_int_d!=''){
-						var content3=json[0].prz_int_d+' €';
+						var content3='<p class="prezziInteri">'+json[0].prz_int_d+' €</p>';
 						$(".prezzoTotDispos").html(content3);
 					}
                     $(".prezzoScnDispos").html(content4);
@@ -315,7 +315,7 @@ function getPromotions(info, cont) {
                     content+='<p class="titDisp">'+json[i].nome_d+'</p>';
 					content+='<div class="infoDisp">';
 					content+='<div class="nomecateg">Prezzo:</div>';
-					content+='<div class="valintcateg">'+json[i].prz_int_d+' €</div>';
+					content+='<div class="valintcateg"><p class="prezziInteri">'+json[i].prz_int_d+' €</p></div>';
 					content+='<div class="valsconto">'+json[i].sconto_d+' %</div>';
 					content+='<div class="valscncateg">'+json[i].prz_scn_d+' €</div>';
 					content+='<div class="botST">';
@@ -636,7 +636,7 @@ function getAss(info, callback) {
 			var cont6=json[0].Cont6;
 			
 			if(json[0].Cat=='SupConf'){
-				$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a><a href="#supportoConf"> Supporto tecnico e configurazione> </a><a id="navlast"href="#device">'+json[0].Nome+'</a>');
+				$(".nav").html('<a href="index.html">HOME> </a> <a href="#assistance">ASSISTENZA> </a><a href="#supportoConf"> Supporto tecnico e configurazione> </a><a id="navlast"href="#device">'+json[0].Nome+'</a>');
 				localStorage.setItem("selectD", 2);
 			}
 			

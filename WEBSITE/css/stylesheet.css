@@ -13,6 +13,10 @@ a {
 	text-decoration: none;
 }
 
+.prezziInteri{
+	text-decoration: line-through red;
+}
+
 /****************/
 /*----HEADER----*/
 /****************/
@@ -516,7 +520,7 @@ a {
 .filtroST, .filtroTSL{
 	background-color: #D4FFFF;
 	height: 196px;
-	width: 680px;
+	width: 690px;
 	padding-top:5px;
 	padding-left:35px;
 	padding-right:4px;
@@ -557,7 +561,7 @@ a {
 	border-width: 2px;
 	border-color: white;
 	margin-top: 20px;
-	margin-right:23px;
+	margin-right:20px;
 	float:left;
 	color:white;
 }
@@ -651,15 +655,12 @@ a {
 
 .nessunDispos{
 	background-color:#3366FF;
-	width:720px;
+	width:725px;
 	height:190px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: white;
-	margin-top: 20px;
-	margin-right:23px;
-	margin-left:-10px;
-	float:left;
+	margin-top: 110px;
 	color:white;
 	text-align:center;
 	font-size:40px;
@@ -703,6 +704,7 @@ a {
 	margin-top:95px;
 }
 .boxPrezzoDispos{
+	line-height: 0.5;
 	position:relative;
 	left:531px;
 	top:128px;
@@ -722,7 +724,7 @@ a {
 	position:relative;
 	left:507px;
 	top:140px;
-	font-size:18px;	
+	font-size:20px;	
 }
 
 .schTecDispos{
@@ -815,7 +817,7 @@ a {
 
 .imgServass{
 	float:left;
-	padding-left:70px;
+	margin-left:70px;
 	padding-top:-10px;
 	margin-top:-15px;
 }
@@ -871,6 +873,8 @@ a {
 	margin-top:100px;
 	
 }
+
+
 
 /********************/
 /*----ASSISTENZA----*/
@@ -1027,8 +1031,8 @@ a {
 
 #dispvis1 {
 	float: left;
-	padding-right: 30px;
-	padding-left: 250px;a
+	margin-left: 240px;
+	margin-right: 80px;
 }
 
 /****************************/
@@ -1355,17 +1359,17 @@ a {
 
 .circ{
 	width:150px;
-	margin-left:38px;
+	margin-left:41px;
 	text-align:center;
 }
 #numcarta{
-	margin-left:70px;
+	margin-left:73px;
 }
 #codsic{
-	margin-left:30px;
+	margin-left:34px;
 }
 #titolare{
-	margin-left:79px;
+	margin-left:77px;
 }
 .scadenza{
 	margin-left:58px;
