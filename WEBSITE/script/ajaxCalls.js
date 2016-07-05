@@ -549,7 +549,7 @@ function getBuy(info){
 			
 			content+='<img id="imgDispBuy" src="'+json[0].img1_d+'">';
 			content+='<div class="specifDispBuy">';
-			content+='<p id="nomeDispBuy" '+json[0].nome_d+'>';
+			content+='<p id="nomeDispBuy">'+json[0].nome_d+'</p>';
 			content+='<p>Specifiche: </p>';
 			if(json[0].memoria1_d!=''){
 				content+='<p> Memoria: '+json[0].memoria1_d+'';
@@ -572,11 +572,11 @@ function getBuy(info){
 			}
 			content+='</div>';
 			content+='<div class= "boxPrzBuy">';
-			content+='<p id="przScnBuy">Prezzo:<br>';
+			content+='<p id="przScnBuy">Prezzo:</p>';
 			if(json[0].prz_int_d!=''){
-				content+=''+json[0].prz_int_d+'€ ';
+				content+='<p class="prezziInteri">'+json[0].prz_int_d+'€ </p>';
 			}
-			content+=''+json[0].prz_scn_d+'€</p>';
+			content+=''+json[0].prz_scn_d+'€';
 			content+='<p>Spese di spedizione:<br>';
 			content+='Gratis</p>';
 			content+='<h2 id="przFinBuy">Prezzo Finale:<br>'+json[0].prz_scn_d+' €</h2>';

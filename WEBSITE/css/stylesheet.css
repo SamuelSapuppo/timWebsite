@@ -707,7 +707,7 @@ a {
 	line-height: 0.5;
 	position:absolute;
 	top:850px;
-	left:780px;
+	left:950px;
 	font-size:18px;	
 }
 .prezzoTotDispos{
@@ -723,7 +723,7 @@ a {
 .boxColoreDispos{
 	position: absolute;
 	top: 960px;
-	left: 750px;
+	left: 920px;
 	font-size: 20px;	
 }
 
@@ -1331,13 +1331,13 @@ a {
 .specifDispBuy{
 	position:relative;
 	margin-left:200px;
-	margin-top:-200px;
+	margin-top:-230px;
 }
 
 .boxPrzBuy{
 	position:relative;
 	margin-left:500px;
-	margin-top:-125px;	
+	margin-top:-165px;	
 }
 
 .condizAcquisto{
