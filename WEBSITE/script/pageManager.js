@@ -21,7 +21,7 @@ function clickPageLinks() {
             prevElm.removeClass('active');
 			newElm.addClass('active');
 			
-			if(page=='home' || page=='assistance' || page=='devices' || page=='device' || page=='timvision' || page=='smartlife' || page=='assistance' || page=='asspage' || page=='promotions' || page=='whoweare')
+			if(page=='home' || page=='assistance' || page=='devices' || page=='smartlife' || page=='assistance' || page=='promotions' || page=='whoweare')
 				restore();
 			else if(page=='supportoConf' || page=='tvSmartLiving' || page=='smartphoneTelefoni' || page=='tvent_cat') {
 				var preElm = $('li[class*="subm"]');
@@ -262,6 +262,8 @@ function manager(args) {
 					getTimvision(function () { clickPageLinks(); });					
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#smartlife">SMART LIFE> </a> <a href="#tvent_cat">Tv & Entertainment> </a> <a id="navlast" href="#timvision">Tim vision</a>');
 					$(".submenus").slideDown();	
+					$(".submenud").slideUp();
+					$('.smartlife_page').css('margin-top', '4px');
 					$('.assistance_page').css('margin-top', '-4px');
 					$('.tvent_cat_page').addClass('subm');
 					break;
@@ -482,6 +484,11 @@ function manager(args) {
 					var iddispis = localStorage.getItem("selectD");
 					$(".submenud").slideDown();	
 					$('.smartlife_page').css('margin-top', '-4px');
+					$(".submenus").slideUp();
+					$('.assistance_page').css('margin-top', '4px');
+					$(".submenua").slideUp();
+					$('.promotions_page').css('margin-top', '4px');					
+					
 					getDevice(iddispis,0,0);
 					if(iddispis <=4){
 						$('li[class*="subm"]').removeClass('subm');
@@ -517,7 +524,10 @@ function manager(args) {
 				
 				case "asspage": {
 					getAss(1,function () { clickPageLinks(); });
-                    		
+                    $(".submenud").slideUp();	
+					$('.smartlife_page').css('margin-top', '4px');
+					$(".submenus").slideUp();
+					$('.assistance_page').css('margin-top', '4px');
 						
 					$(".submenua").slideDown();	
 					$('.promotions_page').css('margin-top', '-4px');
