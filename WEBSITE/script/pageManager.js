@@ -224,6 +224,9 @@ function idDevicePressed(id){
 	localStorage.setItem("selectD", id);	
 }
 
+function selectDevice(num){
+			localStorage.setItem("selection", num);
+}
 				
 function manager(args) {
 
@@ -291,41 +294,7 @@ function manager(args) {
 					clickPageLinks();
 					$(".nav").html('<a href="index.html">HOME> </a> <a href="#devices" id="navlast">DISPOSITIVI</a>');
 					$(".submenud").slideDown();
-					$('.smartlife_page').css('margin-top', '-4px');					
-					
-					document.getElementById("li01").onclick=function(){
-							localStorage.setItem("selection", 1);
-					};
-					document.getElementById("tuttiSmartphoneBot").onclick=function(){
-							localStorage.setItem("selection", 1);
-					};
-					document.getElementById("smartphoneBot").onclick=function(){
-						localStorage.setItem("selection", 2);
-					};
-					document.getElementById("iphoneBot").onclick=function(){
-						localStorage.setItem("selection", 3);
-					};
-					document.getElementById("altroSmartphoneBot").onclick=function(){
-						localStorage.setItem("selection", 4);
-					};
-					
-					
-					
-					document.getElementById("li04").onclick=function(){
-							localStorage.setItem("selection", 5);
-					};
-					document.getElementById("tuttiTVSLBot").onclick=function(){
-							localStorage.setItem("selection", 5);
-					};
-					document.getElementById("tvBot").onclick=function(){
-						localStorage.setItem("selection", 6);
-					};
-					document.getElementById("smartwatchBot").onclick=function(){
-						localStorage.setItem("selection", 7);
-					};
-					document.getElementById("altroTVSLBot").onclick=function(){
-						localStorage.setItem("selection", 8);
-					};
+					$('.smartlife_page').css('margin-top', '-4px');
 					
 					break;
 				}
