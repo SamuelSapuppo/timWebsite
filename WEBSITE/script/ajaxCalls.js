@@ -319,7 +319,7 @@ function getPromotions(info, cont) {
 					content+='<div class="valsconto">'+json[i].sconto_d+' %</div>';
 					content+='<div class="valscncateg">'+json[i].prz_scn_d+' €</div>';
 					content+='<div class="botST">';
-					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+'>SCOPRI</a></span>';
+					content+='<span class='+json[i].classBot_d+'><a href='+json[i].hrefBot_d+' onclick="idDevicePressed('+json[i].id_d+');">SCOPRI</a></span>';
                     content+='</div></div></div>';
 				}
 				
