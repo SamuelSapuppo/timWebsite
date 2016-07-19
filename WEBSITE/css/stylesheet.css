@@ -707,8 +707,9 @@ a {
 	line-height: 0.5;
 	position:absolute;
 	top:850px;
-	left:950px;
 	font-size:18px;	
+	margin-left:550px;
+	width:100px;
 }
 .prezzoTotDispos{
 	font-size:23px;
@@ -723,8 +724,9 @@ a {
 .boxColoreDispos{
 	position: absolute;
 	top: 960px;
-	left: 920px;
 	font-size: 20px;	
+	width:150px;
+	margin-left:520px;;
 }
 
 .schTecDispos{
@@ -771,6 +773,7 @@ a {
 	z-index: 7;
 	margin-left:170px;
 	margin-top:350px;
+	width:60px;
 }
 
 .carousel-img-colors li {
